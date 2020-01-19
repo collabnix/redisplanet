@@ -15,7 +15,6 @@ Visit http://IP:8443 to open Redis Labs Enterprise Software.
 The Docker container with RS runs on your localhost with port 8443 open for HTTPS connections, 9443 for REST API connections, and port 12000 open for redis client connections. You can publish other ports with -p <host_port>:<container_port>.
 Click Setup to start the node configuration steps.
 
-In the Node Configuration settings, enter a cluster FQDN such as cluster.local. Then click Next button.
 
 You will see "Enable flash storage support" checkbox. What does it mean?
  
@@ -36,7 +35,26 @@ In order to create Redis on Flash databases, you must have Flash storage mounted
 
 When Redis on Flash is enabled, additional Flash-specific settings and metrics are available in the system.
 
-```
+In the Node Configuration settings, enter a cluster FQDN such as cluster.local. Then click Next button.
+
+
+## cluster authentication
+
+If you purchased a cluster key please insert it in the field below and click Next. If you would like to use the free version just click Next. We will use trial version.
+
+## Setup Admin Credentials
+
+
+
+## Relogin 
+
+
+## Creating Database
+
+ Select "redis database" and the "single region" deployment, and click Next.
+ 
+ You can supply 3GB as Memory and add port 12000. Add "db1" as database
+Click on "Activate"
 
 
 
