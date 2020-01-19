@@ -57,5 +57,21 @@ If you purchased a cluster key please insert it in the field below and click Nex
 Click on "Activate"
 
 
+## Connect to your Database
 
+```
+$ docker exec -it rp bash
+redislabs@fd8dca50f905:/opt$
+```
+
+```
+ /opt/redislabs/bin/redis-cli -p 12000
+127.0.0.1:12000> auth <enter password>
+OK
+127.0.0.1:12000> set key1 123
+OK
+127.0.0.1:12000> get key1
+"123"
+```
+127.0.0.1:12000> 
  
