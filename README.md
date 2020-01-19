@@ -73,3 +73,13 @@ OK
 127.0.0.1:12000> get key1
 "123"
 ``` 
+
+## Running RedInSight
+
+```
+docker run -v redisinsight:/db -p 8001:8001 redislabs/redisinsight
+```
+
+Pass on 172.17.0.2 as IP, db1 as database, 12000 as port and click Enter
+
+RedInsight should be able to display UI for your database.
