@@ -1,4 +1,4 @@
-# Test Drive Redis Enterprise on Play with Docker Platform
+# Test Drive Redis Enterprise Software on Play with Docker Platform
 
  
  ## Pre-requisite:
