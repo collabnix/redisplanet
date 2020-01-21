@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  redismaster:
+    image: redis:5.0.5
+    command: |
+      sh -c '\
+      redis-server \
+      --dbfilename redis.rdb \
+      --dir /opt/scripts/ \
+      ';
+    logging:
+        driver: "fluentd"
+        options:
+            tag: redismaster
+    ports:
+      - "6379:6379"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/opt/scripts/:/opt/scripts/"
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: stop-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        delay: 10s
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 5
+        window: 180s
+      placement:
+        constraints: [node.role == manager]
+      labels: [APP=Redis Master API]
+    networks:
+      - cp1
+networks:
+  cp1:
