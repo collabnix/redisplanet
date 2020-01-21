@@ -1,0 +1,47 @@
+version: "3.7"
+services:
+  redisslave:
+    image: redis:5.0.5
+    logging:
+        driver: "fluentd"
+        options:
+            tag: redisslave
+    ports:
+      - "6380:6380"
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/opt/scripts/:/opt/scripts/"
+    command: |
+      sh -c '\
+      redis-server \
+      --slave-announce-ip $$(hostname -i) \
+      --port 6380 \
+      --slaveof redismaster 6379 \
+      --save 60 2 \
+      --dbfilename redis.rdb \
+      --dir /opt/scripts/ \
+      ';
+    deploy:
+      mode: global
+      update_config:
+        parallelism: 1
+        delay: 10s
+        order: stop-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        delay: 10s
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 5
+        window: 180s
+      placement:
+        constraints: [node.role == manager]
+      labels: [APP=Redis Slave API]
+    networks:
+      - cp1
+networks:
+  cp1:
