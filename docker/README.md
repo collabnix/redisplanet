@@ -83,3 +83,115 @@ docker run -v redisinsight:/db -p 8001:8001 redislabs/redisinsight
 Pass on 172.17.0.2 as IP, db1 as database, 12000 as port and click Enter
 
 RedInsight should be able to display UI for your database.
+
+# Logs
+
+```
+$ docker logs -f f33
+Generating RSA private key, 2048 bit long modulus (2 primes)
+............................................................................+++++
+......................................................................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+140356392882624:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = f33e3eed6b78, OU = syncer, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+........................+++++
+..............................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+140621421846976:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = f33e3eed6b78, OU = metrics_exporter, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+......................................................................+++++
+...............................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+139880989065664:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = f33e3eed6b78, OU = Cluster API, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+...............+++++
+.................................................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+139722731504064:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = f33e3eed6b78, OU = redisdb, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+...............................+++++
+.............................................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+140077801009600:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = f33e3eed6b78, OU = Admin UI, O = RedisLabs Enterprise Cluster
+Getting Private key
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'syncer', 'syncer']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'metrics_exporter', 'metrics_exporter']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'api', 'Cluster API']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'proxy', 'redisdb']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'cm', 'Admin UI']
+Done.
+2020-02-02 07:24:12,060 WARN No file matches via include "/etc/opt/redislabs/supervisord.conf.d/*.conf"
+2020-02-02 07:24:12,096 INFO RPC interface 'supervisor' initialized
+2020-02-02 07:24:12,097 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2020-02-02 07:24:12,097 INFO supervisord started with pid 103
+2020-02-02 07:24:12,188 INFO __main__ MainThread: Waiting for REST API to be accessible
+2020-02-02 07:24:13,101 INFO spawned: 'ccs' with pid 111
+2020-02-02 07:24:13,103 INFO spawned: 'node_wd' with pid 112
+2020-02-02 07:24:13,105 INFO spawned: 'cluster_wd' with pid 113
+2020-02-02 07:24:13,107 INFO spawned: 'resource_mgr' with pid 114
+2020-02-02 07:24:13,109 INFO spawned: 'stats_archiver' with pid 115
+2020-02-02 07:24:13,111 INFO spawned: 'crdb_worker_0' with pid 116
+2020-02-02 07:24:13,113 INFO spawned: 'crdb_worker_1' with pid 117
+2020-02-02 07:24:13,116 INFO spawned: 'cnm_exec' with pid 119
+2020-02-02 07:24:13,118 INFO spawned: 'redis_mgr' with pid 120
+2020-02-02 07:24:13,121 INFO spawned: 'cnm_http' with pid 125
+2020-02-02 07:24:13,125 INFO spawned: 'crdb_coordinator' with pid 126
+2020-02-02 07:24:13,129 INFO spawned: 'rl_info_provider' with pid 127
+2020-02-02 07:24:13,132 INFO spawned: 'alert_mgr' with pid 129
+2020-02-02 07:24:13,135 INFO spawned: 'cm_server' with pid 130
+2020-02-02 07:24:13,138 INFO spawned: 'dmcproxy' with pid 131
+2020-02-02 07:24:13,141 INFO spawned: 'saslauthd' with pid 132
+2020-02-02 07:24:13,146 INFO spawned: 'mdns_server' with pid 133
+2020-02-02 07:24:13,149 INFO spawned: 'nginx' with pid 134
+2020-02-02 07:24:13,152 INFO spawned: 'pdns_server' with pid 135
+2020-02-02 07:24:13,155 INFO spawned: 'sentinel_service' with pid 136
+2020-02-02 07:24:13,158 INFO spawned: 'start_redis_servers' with pid 137
+2020-02-02 07:24:13,163 INFO spawned: 'metrics_exporter' with pid 138
+2020-02-02 07:24:13,166 INFO spawned: 'job_scheduler' with pid 140
+2020-02-02 07:24:13,281 INFO success: start_redis_servers entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-02-02 07:24:13,375 INFO exited: start_redis_servers (exit status 0; expected)
+2020-02-02 07:24:14,508 INFO success: ccs entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,508 INFO success: node_wd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,508 INFO success: cluster_wd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,509 INFO success: resource_mgr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,509 INFO success: stats_archiver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,509 INFO success: crdb_worker_0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,510 INFO success: crdb_worker_1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,510 INFO success: cnm_exec entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,510 INFO success: redis_mgr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,510 INFO success: cnm_http entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,511 INFO success: crdb_coordinator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,511 INFO success: rl_info_provider entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,511 INFO success: alert_mgr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,511 INFO success: cm_server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,512 INFO success: dmcproxy entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,512 INFO success: saslauthd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,512 INFO success: mdns_server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,512 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,513 INFO success: pdns_server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,513 INFO success: sentinel_service entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:14,513 INFO success: metrics_exporter entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-02 07:24:23,563 INFO success: job_scheduler entered RUNNING state, process has stayed up for > than 10 seconds (startsecs)
+2020-02-02 07:24:24,765 INFO __main__ MainThread: Done, moving to bootstrapping
+2020-02-02 07:24:24,766 INFO __main__ MainThread: Bootstrapping node with action 'None'
+2020-02-02 07:24:24,767 INFO __main__ MainThread: Done
+```
