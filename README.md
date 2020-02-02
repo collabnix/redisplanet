@@ -1,4 +1,4 @@
-# Redis Enterprise Software on Docker & Kubernetes Workshop 
+# Redis Enterprise Software Labs
 
 ## Installation
 
