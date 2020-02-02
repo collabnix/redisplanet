@@ -1,4 +1,4 @@
-# Ultimate Redis Hands-On Labs
+# An Ultimate Redis Hands-On Labs
 
 ## Installation
 
