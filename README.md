@@ -1,8 +1,10 @@
-# Redis Enterprise Software Labs
+# Ultimate Redis Hands-On Labs
 
 ## Installation
 
 ### Linux
+
+[Installing Redis Open Source on Ubuntu 18.04](https://github.com/collabnix/redis/blob/master/install/ubuntu/18.04/README.md)
 
 ### Windows
 
