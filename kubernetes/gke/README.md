@@ -221,3 +221,61 @@ cluster_stats_messages_received:256
 
 C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>
 ```
+
+```
+kubectl apply -f app-depolyment.yaml
+```
+
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl get svc
+NAME             TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)              AGE
+hit-counter-lb   LoadBalancer   10.15.253.213   35.187.144.200   80:31309/TCP         103s
+kubernetes       ClusterIP      10.15.240.1     <none>           443/TCP              46m
+redis-cluster    ClusterIP      10.15.248.54    <none>           6379/TCP,16379/TCP   18m
+```
+
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-0 -- redis-cli role
+1) "master"
+2) (integer) 854
+3) 1) 1) "10.12.2.4"
+      2) "6379"
+      3) "854"
+```
+
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-1 -- redis-cli role
+1) "master"
+2) (integer) 994
+3) 1) 1) "10.12.1.8"
+      2) "6379"
+      3) "994"
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-2 -- redis-cli role
+1) "master"
+2) (integer) 1008
+3) 1) 1) "10.12.2.5"
+      2) "6379"
+      3) "1008"
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-3 -- redis-cli role
+1) "slave"
+2) "10.12.2.3"
+3) (integer) 6379
+4) "connected"
+5) (integer) 1008
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-4 -- redis-cli role
+1) "slave"
+2) "10.12.0.6"
+3) (integer) 6379
+4) "connected"
+5) (integer) 1022
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-5 -- redis-cli role
+1) "slave"
+2) "10.12.1.7"
+3) (integer) 6379
+4) "connected"
+5) (integer) 1022
+```
