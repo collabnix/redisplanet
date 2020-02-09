@@ -15,7 +15,7 @@ choco install git
  - Install Docker Desktop for Windows
 
 
-## cloning this Repo
+## Cloning this Repo
 
 ```
 $git clone https://github.com/collabnix/redis
