@@ -6,6 +6,10 @@ Redis is a powerful tool for data storage and caching. Redis Cluster extends the
 
 - Installing [Google Cloud SDK](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
 
+```
+gcloud init
+```
+
 
 - Install GIT using Chocolatey
 
@@ -19,7 +23,11 @@ choco install git
 
  - Install Docker Desktop for Windows
  
+ - Create 3 Node GKE Cluster
  
+ ```
+ gcloud container clusters create k8s-lab1 --disk-size 10 --zone asia-east1-a --machine-type n1-standard-2 --num-nodes 3 --scopes compute-rw
+ ```
  
  
  ```
