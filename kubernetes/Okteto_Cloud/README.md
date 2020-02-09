@@ -1,4 +1,4 @@
-# Redis on Okteto Cloud - Kubernetes for Developer
+# Redis Open Source for Developers running on Kubernetes Cluster using Okteto Cloud
 
 
 ## Pre-requisite
