@@ -5,15 +5,21 @@
 
 - Create Okteto Cloud Acccount - (https://okteto.com/) login via Github Credentials
 
+### On Mac or Linux
+
+
 - Install okteto CLI for Mac/Linux User :- 
+
 ```
 curl https://get.okteto.com -sSfL | sh
 ```
-- Windows:
+
+### On Windows:
 
 Download (https://downloads.okteto.com/cli/okteto.exe) and add it to your $PATH.
 
-## connect with okteto Cli and okteto namespaces 
+## Connect with Okteto Cli and Okteto namespaces 
+
 ```
 sangam:~ sangam$ okteto login
 Authentication will continue in your default browser
@@ -25,15 +31,20 @@ sangam:~ sangam$ okteto namespace
  ✓  Updated context 'cloud_okteto_com' in '/Users/sangam/.kube/config'
 sangam:~ sangam$ 
 ```
-Now your developer environment connected with CLI 
 
-## Visit to UI okteto Cloud Dashboard  :- (https://cloud.okteto.com/)
+Hence, this is how developer can connect to environment
 
-## To get your password run:
+## Acecssing Okteto Cloud Dashboard 
 
-    export REDIS_PASSWORD=$(kubectl get secret --namespace sangam14 redis -o jsonpath="{.data.redis-password}" | base64 --decode)
+- https://cloud.okteto.com/
 
-## To connect to your Redis server:
+## Fetching the Password:
+
+```
+export REDIS_PASSWORD=$(kubectl get secret --namespace sangam14 redis -o jsonpath="{.data.redis-password}" | base64 --decode)
+```
+
+## Connecting to Redis server:
 
 1. Run a Redis pod that you can use as a client:
 ```
@@ -42,12 +53,14 @@ Now your developer environment connected with CLI
    --image docker.io/bitnami/redis:5.0.5-debian-9-r141 -- bash
 ```
 2. Connect using the Redis CLI:
+
 ```
    redis-cli -h redis -a $REDIS_PASSWORD
 ```
+
 3. To connect to your database from outside the cluster execute the following commands:
+
 ```
-    kubectl port-forward --namespace sangam14 svc/redis 6379:6379 &
-    redis-cli -h 127.0.0.1 -p 6379 -a $REDIS_PASSWORD
+kubectl port-forward --namespace sangam14 svc/redis 6379:6379 & redis-cli -h 127.0.0.1 -p 6379 -a $REDIS_PASSWORD
 ```
 
