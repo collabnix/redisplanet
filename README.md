@@ -1,4 +1,4 @@
-# An Ultimate Redis Hands-On Labs
+# Introducing Redisplanet - An Ultimate Redis Hands-On Labs
 
 ## Redis Open Source
 
