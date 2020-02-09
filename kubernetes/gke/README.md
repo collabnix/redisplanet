@@ -1,4 +1,4 @@
-# Setting up Redis on GKE Cluster
+# Setting up Multi-Node Redis Cluster on GKE Cluster
 
 ## Pre-requisite
 
