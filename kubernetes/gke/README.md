@@ -53,7 +53,7 @@ cd redis/kubernetes/gke/
 
 
 ```
-$ kubectl apply -f redis-sts.yaml
+$ kubectl apply -f redis-statefullset.yaml
 configmap/redis-cluster created
 statefulset.apps/redis-cluster created
 ```
