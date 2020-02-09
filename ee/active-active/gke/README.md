@@ -3,7 +3,8 @@
 ## Pre-requisite
 
 - Create 3 Ubuntu 18.04 LTS instances, each of 6GB on GCP
-- Install Docker 
+- Chose Asia for 1st, US for 2nd & Europe for 3rd Instances
+- Install Docker on each of these nodes
 
 ## Cloning the Repository
 
