@@ -1,4 +1,4 @@
-# Setting up Multi-Node Redis Cluster on GKE Cluster
+# Setting up Multi-Node Redis Cluster on Google Cloud Engine
 
 ## Pre-requisite
 
