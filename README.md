@@ -48,7 +48,14 @@
   - [HINCRBY](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hincrby)
   - [HGETALL](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hgetall)
   
-### Redis - Ready Stack for You
+### Redis Technology Stack 
+
+  - [TBD]()
+  
+
+### Redis Ready Solution 
+
+  - [TBD]()
 
 
 
