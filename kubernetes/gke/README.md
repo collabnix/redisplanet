@@ -4,6 +4,9 @@ Redis is a powerful tool for data storage and caching. Redis Cluster extends the
 
 ## Pre-requisite
 
+- Installing [Google Cloud SDK](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)
+
+
 - Install GIT using Chocolatey
 
 ```
@@ -15,6 +18,21 @@ choco install git
 ```
 
  - Install Docker Desktop for Windows
+ 
+ 
+ 
+ 
+ ```
+ PS C:\Users\Ajeet_Raina> kubectl config get-contexts
+CURRENT   NAME                                         CLUSTER                                      AUTHINFO                                     NAMESPACE
+*         gke_lofty-tea-249310_asia-east1-a_k8s-lab1   gke_lofty-tea-249310_asia-east1-a_k8s-lab1   gke_lofty-tea-249310_asia-east1-a_k8s-lab1
+PS C:\Users\Ajeet_Raina> kubectl get nodes
+NAME                                      STATUS   ROLES    AGE   VERSION
+gke-k8s-lab1-default-pool-f1fae040-9vd9   Ready    <none>   64m   v1.13.11-gke.23
+gke-k8s-lab1-default-pool-f1fae040-ghf5   Ready    <none>   64m   v1.13.11-gke.23
+gke-k8s-lab1-default-pool-f1fae040-z0rf   Ready    <none>   64m   v1.13.11-gke.23
+PS C:\Users\Ajeet_Raina>
+```
 
 
 ## Cloning this Repo
