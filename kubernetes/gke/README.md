@@ -199,3 +199,25 @@ M: bf11440a398e88ad7bfc167dd3219a4f594ffa39 10.12.0.6:6379
 >>> Check slots coverage...
 [OK] All 16384 slots covered.
 ```
+
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-0 -- redis-cli cluster info
+cluster_state:ok
+cluster_slots_assigned:16384
+cluster_slots_ok:16384
+cluster_slots_pfail:0
+cluster_slots_fail:0
+cluster_known_nodes:6
+cluster_size:3
+cluster_current_epoch:6
+cluster_my_epoch:1
+cluster_stats_messages_ping_sent:126
+cluster_stats_messages_pong_sent:130
+cluster_stats_messages_sent:256
+cluster_stats_messages_ping_received:125
+cluster_stats_messages_pong_received:126
+cluster_stats_messages_meet_received:5
+cluster_stats_messages_received:256
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>
+```
