@@ -1,4 +1,4 @@
-# Setting up Multi-Node Redis Cluster on Google Cloud Engine
+# Setting up Multi-Node Redis Cluster on Google Cloud Engine using Docker Desktop for Windows
 
 Redis is a powerful tool for data storage and caching. Redis Cluster extends the functionality by offering sharding and correlated performance benefits, linear scaling, and higher availability because of how Redis stores data. The data is automatically split among multiple nodes, which allows operations to continue, even when a subset of the nodes are experiencing failures or are unable to communicate with the rest of the cluster.
 
