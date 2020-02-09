@@ -143,4 +143,59 @@ redis-cluster   ClusterIP   10.15.248.54   <none>        6379/TCP,16379/TCP   5s
 C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>
 ```
 
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379'
+'10.12.2.3:6379'10.12.0.6:6379'10.12.1.7:6379'10.12.2.4:6379'10.12.1.8:6379'10.12.2.5:6379'
+```
 
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-0 -- redis-cli --cluster create 10.12.2.3:6379 10.12.0.6:6379 10.12.1.7:6379 10.12.2.4:6379 10.12.1.8:6379 10.12.2.5:6379 --cluster-replicas 1
+>>> Performing hash slots allocation on 6 nodes...
+Master[0] -> Slots 0 - 5460
+Master[1] -> Slots 5461 - 10922
+Master[2] -> Slots 10923 - 16383
+Adding replica 10.12.2.4:6379 to 10.12.2.3:6379
+Adding replica 10.12.1.8:6379 to 10.12.0.6:6379
+Adding replica 10.12.2.5:6379 to 10.12.1.7:6379
+M: 8a78d53307bdde11f6e53a9c1e90b1a9949463f1 10.12.2.3:6379
+   slots:[0-5460] (5461 slots) master
+M: bf11440a398e88ad7bfc167dd3219a4f594ffa39 10.12.0.6:6379
+   slots:[5461-10922] (5462 slots) master
+M: c82e231121118c731194d31ddc20d848953174e7 10.12.1.7:6379
+   slots:[10923-16383] (5461 slots) master
+S: 707bb247a2ecc3fd36feb3c90cc58ff9194b5166 10.12.2.4:6379
+   replicates 8a78d53307bdde11f6e53a9c1e90b1a9949463f1
+S: 63abc45d61a9d9113db0c57f7fe0596da4c83a6e 10.12.1.8:6379
+   replicates bf11440a398e88ad7bfc167dd3219a4f594ffa39
+S: 10c2bc0cc626725b5a1afdc5e68142610e498fd7 10.12.2.5:6379
+   replicates c82e231121118c731194d31ddc20d848953174e7
+Can I set the above configuration? (type 'yes' to accept): yes
+>>> Nodes configuration updated
+>>> Assign a different config epoch to each node
+>>> Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join
+.....
+>>> Performing Cluster Check (using node 10.12.2.3:6379)
+M: 8a78d53307bdde11f6e53a9c1e90b1a9949463f1 10.12.2.3:6379
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+S: 63abc45d61a9d9113db0c57f7fe0596da4c83a6e 10.12.1.8:6379
+   slots: (0 slots) slave
+   replicates bf11440a398e88ad7bfc167dd3219a4f594ffa39
+M: c82e231121118c731194d31ddc20d848953174e7 10.12.1.7:6379
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: 10c2bc0cc626725b5a1afdc5e68142610e498fd7 10.12.2.5:6379
+   slots: (0 slots) slave
+   replicates c82e231121118c731194d31ddc20d848953174e7
+S: 707bb247a2ecc3fd36feb3c90cc58ff9194b5166 10.12.2.4:6379
+   slots: (0 slots) slave
+   replicates 8a78d53307bdde11f6e53a9c1e90b1a9949463f1
+M: bf11440a398e88ad7bfc167dd3219a4f594ffa39 10.12.0.6:6379
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+[OK] All nodes agree about slots configuration.
+>>> Check for open slots...
+>>> Check slots coverage...
+[OK] All 16384 slots covered.
+```
