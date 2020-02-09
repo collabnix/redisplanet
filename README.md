@@ -11,11 +11,15 @@
 
 - Windows
 - MacOS
+- Docker
+  - [Redis on Docker Swarm](http://collabnix.com/getting-started-with-redis-inside-docker-container-in-2-minutes/)
 - Kubernetes
    - Cloud
      - GKE
        -  [Setting up 3 Node Redis Cluster on GKE](https://github.com/collabnix/redis/blob/master/kubernetes/gke/README.md#setting-up-multi-node-redis-cluster-on-google-cloud-engine)<br>
 
+- IoT
+  - [Redis running inside Docker Container on Jetson Nano](http://collabnix.com/running-redis-inside-docker-container-on-jetson-nano/)
 
 ## Redis Enterprise Software
 
@@ -28,7 +32,8 @@
    - [Setting up Redis Enterprise Software on Docker](https://github.com/collabnix/redis/blob/master/docker/README.md)<br>
    - [Installing RedisInSight & Connect to Redis Enterprise Software](https://github.com/collabnix/redis/blob/master/docker/README.md#running-redinsight)<br>
    
- 
+
+
 
 ### Redis Data Structure
 - [Hashes](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md)
