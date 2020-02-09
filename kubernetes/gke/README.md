@@ -1,5 +1,7 @@
 # Setting up Multi-Node Redis Cluster on Google Cloud Engine
 
+Redis is a powerful tool for data storage and caching. Redis Cluster extends the functionality by offering sharding and correlated performance benefits, linear scaling, and higher availability because of how Redis stores data. The data is automatically split among multiple nodes, which allows operations to continue, even when a subset of the nodes are experiencing failures or are unable to communicate with the rest of the cluster.
+
 ## Pre-requisite
 
 - Install GIT using Chocolatey
@@ -233,6 +235,10 @@ hit-counter-lb   LoadBalancer   10.15.253.213   35.187.144.200   80:31309/TCP   
 kubernetes       ClusterIP      10.15.240.1     <none>           443/TCP              46m
 redis-cluster    ClusterIP      10.15.248.54    <none>           6379/TCP,16379/TCP   18m
 ```
+
+## Simulate a Node Failure
+
+We can simulate the failure of a cluster member by deleting the Pod. When we delete redis-cluster-0, which was originally a master, we see that Kubernetes promotes redis-cluster-3 to master, and when redis-cluster-0 returns, it does so as a slave
 
 ```
 C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl exec -it redis-cluster-0 -- redis-cli role
