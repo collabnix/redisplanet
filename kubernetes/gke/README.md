@@ -129,3 +129,18 @@ Events:
   Normal   Created                 3m49s                  kubelet, gke-k8s-lab1-default-pool-f1fae040-9vd9  Created container
   Normal   Started                 3m49s                  kubelet, gke-k8s-lab1-default-pool-f1fae040-9vd9  Started container
 ```
+
+
+```
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl apply -f redis-svc.yaml
+service/redis-cluster created
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>kubectl get svc
+NAME            TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)              AGE
+kubernetes      ClusterIP   10.15.240.1    <none>        443/TCP              28m
+redis-cluster   ClusterIP   10.15.248.54   <none>        6379/TCP,16379/TCP   5s
+
+C:\Users\Ajeet_Raina\Desktop\redis\kubernetes\gke>
+```
+
+
