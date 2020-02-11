@@ -1,0 +1,76 @@
+version: "3.3"
+services:
+
+  redis-sentinel:
+    image: 127.0.0.1:5000/collabnix-redis-sentinel
+    volumes:
+      - sentinel-conf:/etc/redis
+    deploy:
+      mode: global
+    environment:
+      - REDIS_MASTER_HOST=${REDIS_MASTER_IP}
+      - SENTINEL_DOWN_AFTER=5000
+      - SENTINEL_FAILOVER=15000
+    networks:
+      - host
+
+  redis-master:
+    image: 127.0.0.1:5000/collabnix-redis
+    volumes:
+      - redis-data:/data
+      - redis-conf:/etc/redis
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.hostname == ${REDIS_MASTER_HOSTNAME}
+    networks:
+      - host
+
+  redis-slave-node1:
+    image: 127.0.0.1:5000/collabnix-redis
+    volumes:
+      - redis-data:/data
+      - redis-conf:/etc/redis
+    environment:
+      - REDIS_MASTER_HOST=${REDIS_MASTER_IP}
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.hostname == ${REDIS_SLAVE_NODE1_HOSTNAME}
+    networks:
+      - host
+
+  redis-slave-node2:
+    image: 127.0.0.1:5000/collabnix-redis
+    volumes:
+      - redis-data:/data
+      - redis-conf:/etc/redis
+    environment:
+      - REDIS_MASTER_HOST=${REDIS_MASTER_IP}
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.hostname == ${REDIS_SLAVE_NODE2_HOSTNAME}
+    networks:
+      - host
+
+  agile-python-app:
+    image: 127.0.0.1:5000/collanix-python-app
+    ports:
+      - "38000:611"
+    deploy:
+      mode: replicated
+      replicas: 3
+    environment:
+      - SENTINEL_HOST=${SENTINEL_IP}
+
+volumes:
+  redis-data:
+  redis-conf:
+  sentinel-conf:
+networks:
+  host:
+    external: true
