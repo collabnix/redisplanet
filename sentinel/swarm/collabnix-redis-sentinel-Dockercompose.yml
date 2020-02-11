@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  agile-redis:
+    image: 127.0.0.1:5000/agile-redis-sentinel
+    ports:
+      - '26379:26379'
+    build:
+      context: ./
+      dockerfile: ./agile-redis-sentinel-Dockerfile.yml
