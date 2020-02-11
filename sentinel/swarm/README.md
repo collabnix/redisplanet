@@ -1,4 +1,4 @@
-# High Availability with Redis Open Soruce using Redis Sentinel
+# High Availability with Redis Open Source using Redis Sentinel
 
 
 ## Pre-requisite
