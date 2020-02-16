@@ -3,11 +3,11 @@
 
 ## Prerequisites
 
-- your local machine, you’ll need to have the following installed on your machine:
+- Your Local Development Environment
 
-   - Docker - this will be needed to run a local instance of redis, if you already have a redis service then Docker is not needed.
-   - Go version 1.12+ - We’ll be using Go modules to manage our project’s dependencies
-   - A text editor such as Visual Studio Code
+   - Docker Binaries installed, up and Running
+   - Go version 1.12+ 
+   - Text editor such as Visual Studio Code
 
 ## Install Redis Using Docker Locally 
 
@@ -29,9 +29,10 @@ sangam:~ sangam$ docker run --name redis-test-instance -p 6379:6379 -d redis
 
 ```
 
-# Use `go-redis' with golang 
+# Using `go-redis' 
 
-create main.go with following content :
+
+Create main.go with following content :
 
 ```
 package main
