@@ -13,6 +13,7 @@
 - MacOS
 - Docker
   - [Redis on Docker Swarm](http://collabnix.com/getting-started-with-redis-inside-docker-container-in-2-minutes/)
+  - [Getting Started with Redis + Docker + Go](https://github.com/collabnix/redisplanet/blob/master/docker/Getting_Started_with_Docker-Redis-Go.md#getting-started-with-docker--redis--go)
 - Kubernetes
    - Cloud
      - GKE
