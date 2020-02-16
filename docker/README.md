@@ -195,3 +195,116 @@ Done.
 2020-02-02 07:24:24,766 INFO __main__ MainThread: Bootstrapping node with action 'None'
 2020-02-02 07:24:24,767 INFO __main__ MainThread: Done
 ```
+
+
+# List of Services while bringing up RS
+
+```
+[Captains-Bay]🚩 >  docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                                                                                                        NAMES
+aac785d36550        redislabs/redis     "/opt/start.sh"     6 seconds ago       Up 4 seconds        53/tcp, 5353/tcp, 8001/tcp, 8070/tcp, 0.0.0.0:8443->8443/tcp, 8080/tcp, 0.0.0.0:9443->9443/tcp, 10000-11999/tcp, 12001-19999/tcp, 0.0.0.0:12000->12000/tcp   rp1
+[Captains-Bay]🚩 >  docker logs -f aac
+Generating RSA private key, 2048 bit long modulus (2 primes)
+................+++++
+..................................................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+139738565550528:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = rp1, OU = syncer, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+.............................................+++++
+...............................................................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+140499221963200:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = rp1, OU = metrics_exporter, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+.............+++++
+...................................................................................+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+140466411033024:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = rp1, OU = Cluster API, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+..........+++++
+..+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+140391307866560:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = rp1, OU = redisdb, O = RedisLabs Enterprise Cluster
+Getting Private key
+Generating RSA private key, 2048 bit long modulus (2 primes)
+..............................................................................+++++
+..+++++
+e is 65537 (0x010001)
+Can't load /opt/redislabs/.rnd into RNG
+139634416890304:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/opt/redislabs/.rnd
+Signature ok
+subject=CN = rp1, OU = Admin UI, O = RedisLabs Enterprise Cluster
+Getting Private key
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'syncer', 'syncer']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'metrics_exporter', 'metrics_exporter']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'api', 'Cluster API']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'proxy', 'redisdb']
+Run command: ['/opt/redislabs/sbin/generate_cert.sh', 'cm', 'Admin UI']
+Done.
+2020-02-16 15:12:32,788 WARN No file matches via include "/etc/opt/redislabs/supervisord.conf.d/*.conf"
+2020-02-16 15:12:32,842 INFO RPC interface 'supervisor' initialized
+2020-02-16 15:12:32,844 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2020-02-16 15:12:32,845 INFO supervisord started with pid 103
+2020-02-16 15:12:32,986 INFO __main__ MainThread: Waiting for REST API to be accessible
+2020-02-16 15:12:33,857 INFO spawned: 'ccs' with pid 111
+2020-02-16 15:12:33,871 INFO spawned: 'node_wd' with pid 112
+2020-02-16 15:12:33,878 INFO spawned: 'cluster_wd' with pid 113
+2020-02-16 15:12:33,904 INFO spawned: 'resource_mgr' with pid 114
+2020-02-16 15:12:33,913 INFO spawned: 'stats_archiver' with pid 115
+2020-02-16 15:12:33,940 INFO spawned: 'crdb_worker_0' with pid 116
+2020-02-16 15:12:33,961 INFO spawned: 'crdb_worker_1' with pid 117
+2020-02-16 15:12:34,015 INFO spawned: 'cnm_exec' with pid 124
+2020-02-16 15:12:34,038 INFO spawned: 'redis_mgr' with pid 125
+2020-02-16 15:12:34,059 INFO spawned: 'cnm_http' with pid 126
+2020-02-16 15:12:34,086 INFO spawned: 'crdb_coordinator' with pid 127
+2020-02-16 15:12:34,115 INFO spawned: 'rl_info_provider' with pid 128
+2020-02-16 15:12:34,149 INFO spawned: 'alert_mgr' with pid 129
+2020-02-16 15:12:34,182 INFO spawned: 'cm_server' with pid 130
+2020-02-16 15:12:34,227 INFO spawned: 'dmcproxy' with pid 131
+2020-02-16 15:12:34,275 INFO spawned: 'saslauthd' with pid 132
+2020-02-16 15:12:34,340 INFO spawned: 'mdns_server' with pid 133
+2020-02-16 15:12:34,399 INFO spawned: 'nginx' with pid 135
+2020-02-16 15:12:34,502 INFO spawned: 'pdns_server' with pid 136
+2020-02-16 15:12:34,546 INFO spawned: 'sentinel_service' with pid 137
+2020-02-16 15:12:34,590 INFO spawned: 'start_redis_servers' with pid 138
+2020-02-16 15:12:34,660 INFO spawned: 'metrics_exporter' with pid 139
+2020-02-16 15:12:34,708 INFO spawned: 'job_scheduler' with pid 140
+2020-02-16 15:12:34,739 INFO success: start_redis_servers entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2020-02-16 15:12:34,865 INFO success: ccs entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,866 INFO success: node_wd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,876 INFO success: cluster_wd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,883 INFO success: resource_mgr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,956 INFO success: stats_archiver entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,956 INFO success: crdb_worker_0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,957 INFO success: crdb_worker_1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:34,958 INFO exited: start_redis_servers (exit status 0; expected)
+2020-02-16 15:12:35,116 INFO success: cnm_exec entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:35,117 INFO success: redis_mgr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:35,119 INFO success: cnm_http entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:35,119 INFO success: crdb_coordinator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:35,120 INFO success: rl_info_provider entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:35,147 INFO success: alert_mgr entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,150 INFO success: cm_server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,150 INFO success: dmcproxy entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,151 INFO success: saslauthd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,151 INFO success: mdns_server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,152 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,152 INFO success: pdns_server entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,153 INFO success: sentinel_service entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:36,154 INFO success: metrics_exporter entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-02-16 15:12:44,878 INFO success: job_scheduler entered RUNNING state, process has stayed up for > than 10 seconds (startsecs)
+```
