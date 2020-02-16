@@ -59,9 +59,12 @@ func main() {
 
 ```
 
-output: <br>
+##Output
+
+
 When we go to run this now, we will see that our incredibly simple Go application has been able to 
 successfully `ping` the redis instance that we have spun up and returned a successful `PONG` response
+
 
 ```
 sangam:golang-daily sangam$ go run main.go
