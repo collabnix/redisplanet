@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: redis-0
 spec:
-  # 只能启动一个实例，否则存在资源竞争
+
   replicas: 1
   template:
     metadata:
@@ -37,7 +37,7 @@ kind: Deployment
 metadata:
   name: redis-1
 spec:
-  # 只能启动一个实例，否则存在资源竞争
+
   replicas: 1
   template:
     metadata:
@@ -70,7 +70,7 @@ kind: Deployment
 metadata:
   name: redis-2
 spec:
-  # 只能启动一个实例，否则存在资源竞争
+ 
   replicas: 1
   template:
     metadata:
@@ -103,7 +103,7 @@ kind: Deployment
 metadata:
   name: redis-3
 spec:
-  # 只能启动一个实例，否则存在资源竞争
+ 
   replicas: 1
   template:
     metadata:
@@ -136,7 +136,7 @@ kind: Deployment
 metadata:
   name: redis-4
 spec:
-  # 只能启动一个实例，否则存在资源竞争
+
   replicas: 1
   template:
     metadata:
@@ -169,7 +169,7 @@ kind: Deployment
 metadata:
   name: redis-5
 spec:
-  # 只能启动一个实例，否则存在资源竞争
+ 
   replicas: 1
   template:
     metadata:
