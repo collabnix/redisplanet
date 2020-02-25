@@ -1,0 +1,198 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-0
+spec:
+  # 只能启动一个实例，否则存在资源竞争
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        node: node0
+    spec:
+      hostname: redis-0
+      volumes:
+        - name: redis-vol
+          hostPath: 
+            path: /data/redis-cluster/redis-0
+      containers:
+      - name: redis-0
+        image: redis:ruby
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/redis-server"]
+        args: ["/redis-conf/redis.conf"]
+        ports:
+        - containerPort: 7000
+        - containerPort: 17000
+        volumeMounts:
+        - name: redis-vol
+          readOnly: false
+          mountPath: "/data"
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-1
+spec:
+  # 只能启动一个实例，否则存在资源竞争
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        node: node1
+    spec:
+      hostname: redis-1
+      volumes:
+        - name: redis-vol
+          hostPath: 
+            path: /data/redis-cluster/redis-1
+      containers:
+      - name: redis-0
+        image: redis:ruby
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/redis-server"]
+        args: ["/redis-conf/redis.conf"]
+        ports:
+        - containerPort: 7000
+        - containerPort: 17000
+        volumeMounts:
+        - name: redis-vol
+          readOnly: false
+          mountPath: "/data"
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-2
+spec:
+  # 只能启动一个实例，否则存在资源竞争
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        node: node2
+    spec:
+      hostname: redis-2
+      volumes:
+        - name: redis-vol
+          hostPath: 
+            path: /data/redis-cluster/redis-2
+      containers:
+      - name: redis-2
+        image: redis:ruby
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/redis-server"]
+        args: ["/redis-conf/redis.conf"]
+        ports:
+        - containerPort: 7000
+        - containerPort: 17000
+        volumeMounts:
+        - name: redis-vol
+          readOnly: false
+          mountPath: "/data"
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-3
+spec:
+  # 只能启动一个实例，否则存在资源竞争
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        node: node3
+    spec:
+      hostname: redis-3
+      volumes:
+        - name: redis-vol
+          hostPath: 
+            path: /data/redis-cluster/redis-3
+      containers:
+      - name: redis-3
+        image: redis:ruby
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/redis-server"]
+        args: ["/redis-conf/redis.conf"]
+        ports:
+        - containerPort: 7000
+        - containerPort: 17000
+        volumeMounts:
+        - name: redis-vol
+          readOnly: false
+          mountPath: "/data"
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-4
+spec:
+  # 只能启动一个实例，否则存在资源竞争
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        node: node4
+    spec:
+      hostname: redis-4
+      volumes:
+        - name: redis-vol
+          hostPath: 
+            path: /data/redis-cluster/redis-4
+      containers:
+      - name: redis-4
+        image: redis:ruby
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/redis-server"]
+        args: ["/redis-conf/redis.conf"]
+        ports:
+        - containerPort: 7000
+        - containerPort: 17000
+        volumeMounts:
+        - name: redis-vol
+          readOnly: false
+          mountPath: "/data"
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis-5
+spec:
+  # 只能启动一个实例，否则存在资源竞争
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: redis
+        node: node5
+    spec:
+      hostname: redis-5
+      volumes:
+        - name: redis-vol
+          hostPath: 
+            path: /data/redis-cluster/redis-5
+      containers:
+      - name: redis-5
+        image: redis:ruby
+        imagePullPolicy: IfNotPresent
+        command: ["/usr/local/bin/redis-server"]
+        args: ["/redis-conf/redis.conf"]
+        ports:
+        - containerPort: 7000
+        - containerPort: 17000
+        volumeMounts:
+        - name: redis-vol
+          readOnly: false
+          mountPath: "/data"
+
