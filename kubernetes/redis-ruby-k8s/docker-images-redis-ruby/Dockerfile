@@ -1,6 +1,5 @@
 # Alpine with ruby support image
 FROM redis:latest
-MAINTAINER Haijian Zeng <cookeem@qq.com>
 
 # Copy redis-trib.rb
 COPY redis-trib.rb /root/redis-trib.rb
