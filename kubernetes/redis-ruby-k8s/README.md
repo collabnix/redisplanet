@@ -18,18 +18,12 @@ Follow this guide: [Install Docker and run hello-world](https://docs.docker.com/
 
 ### Clone the git repository
 
-- Clone the git repository and change working directory to ```kubernetes-redis-cluster/```
+- Clone the git repository and change working directory to ```redis-ruby-k8s```
 
 ```sh
-$ git clone https://github.com/cookeem/kubernetes-redis-cluster.git
-Cloning into 'kubernetes-redis-cluster'...
-remote: Counting objects: 17, done.
-remote: Compressing objects: 100% (11/11), done.
-remote: Total 17 (delta 6), reused 17 (delta 6), pack-reused 0
-Unpacking objects: 100% (17/17), done.
-Checking connectivity... done.
+$ git clone https://github.com/collabnix/redisplanet
 
-$ cd kubernetes-redis-cluster/
+$ cd redisplanet/kubernetes/redis-ruby-k8s
 ```
 
 ---
