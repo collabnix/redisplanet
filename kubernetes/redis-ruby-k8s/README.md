@@ -1,10 +1,10 @@
-# How to run redis cluster on kubernetes
+# How to run Redis Cluster on Kubernetes? 
 
 ---
 
 ### Prerequisites
 
-- Install minikube or kubernetes
+- Install Minikube
 
 Follow this guide: [Install minikube on local machine](https://kubernetes.io/docs/getting-started-guides/minikube/)
 
