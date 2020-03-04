@@ -30,7 +30,7 @@
   
 ## Redis Configuration File
 
-- [Everything You Want to Know about Redis.conf]()
+- [Everything You Want to Know about Redis.conf](https://github.com/collabnix/redisplanet/blob/master/Redis-conf/README.md)
 
 ## Redis Enterprise Software
 
