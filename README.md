@@ -26,6 +26,11 @@
   
 - Monitoring
   - [Visualize Redis Open Source using Rebrow](https://collabnix.com/visualize-redis-open-source-using-rebrow/)
+  
+  
+## Redis Configuration File
+
+- [Everything You Want to Know about Redis.conf]()
 
 ## Redis Enterprise Software
 
