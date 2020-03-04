@@ -68,3 +68,33 @@ Basically in this configuration Redis acts in a similar way to memcached.
 ## How to use Redis as an LRU cache?
 
 Refer [this](https://github.com/collabnix/redisplanet/blob/master/Redis-conf/redis-as-lru-cache/README.md) link
+
+## Where can I find a sample Redis.conf
+
+Refer [this](http://download.redis.io/redis-stable/redis.conf) link
+
+## Tell me about the structure of Redis.conf
+
+
+- Lines beginning with a # are comments and are ignored
+- Directives are given using the syntax keyword value [value …]
+- String values should be enclosed with quotes when containing spaces
+- The empty string ("") is a valid value
+- Depending on the configuration directive, the value of '0' usually means off
+- Size values (e.g. maxmemory) are given in bytes, unless an explicit suffix is used (e.g. '10mb' and '50gb')
+
+
+## Tell me more about Runtime Configuration?
+
+The configuration of an online server can be inspected using the the CONFIG GET command. Note that the command supports glob-like patterns, so if you don't remember the exact keyword you can still use it, e.g. CONFIG GET maxmem* or even CONFIG GET *.
+
+Note: the values of some configuration directives are also reported in INFO's output.
+
+The value of most configuration settings can be changed while the server is running and without interruption to the service using the CONFIG SET command. That said, a few directives can only be set at startup and cannot be changed during runtime, including: bind, port, unixsocket, unixsocketperm, daemonize, supervised and rename-command.
+
+Also, a several of the directives can only be changed using specialized commands rather then CONFIG SET. These include:
+
+- The slaveof directive is managed during runtime with the 'SLAVEOF' command
+- Modules are loaded using the MODULE LOAD command
+
+Runtime configuration changes that you perform are not persisted, and configuration settings will revert to their previously-defined/default values upon the next server restart. To persist such changes they have to be stored in the server's configuration file - do so by either editing the file directly, or use the CONFIG REWRITE command.
