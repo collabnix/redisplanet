@@ -45,5 +45,21 @@ Please refer to the CONFIG SET and CONFIG GET pages for more information.
 Note that modifying the configuration on the fly has no effects on the redis.conf file so at the next restart of Redis the old 
 configuration will be used instead.
 Make sure to also modify the redis.conf file accordingly to the configuration you set using CONFIG SET. 
+
+## Tell me something about CONFIG_REWRITE?
+
 You can do it manually, or starting with Redis 2.8, you can just use [CONFIG REWRITE](https://redis.io/commands/config-rewrite), which will automatically scan your redis.conf file and update the fields which don't match the current configuration value. 
 Fields non existing but set to the default value are not added. Comments inside your configuration file are retained.
+
+
+## How to configure Redis as a Cache?
+
+If you plan to use Redis just as a cache where every key will have an expire set, you may consider using the following configuration instead (assuming a max memory limit of 2 megabytes as an example):
+
+```
+maxmemory 2mb
+maxmemory-policy allkeys-lru
+```
+
+In this configuration there is no need for the application to set a time to live for keys using the EXPIRE command (or equivalent) since all the keys will be evicted using an approximated LRU algorithm as long as we hit the 2 megabyte memory limit.
+Basically in this configuration Redis acts in a similar way to memcached. 
