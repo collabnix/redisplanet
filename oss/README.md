@@ -128,3 +128,148 @@ LPUSH puts the new element at the start of the list.
 
 
     LPUSH friends "Sam"
+
+
+LRANGE gives a subset of the list. It takes the index of the first element you want to retrieve as its first parameter and the index of the last element you want to retrieve as its second parameter. A value of -1 for the second parameter means to retrieve elements until the end of the list, -2 means to include up to the penultimate, and so forth.
+
+
+    LRANGE friends 0 -1 => 1) "Sam", 2) "Alice", 3) "Bob"
+    LRANGE friends 0 1 => 1) "Sam", 2) "Alice"
+    LRANGE friends 1 2 => 1) "Alice", 2) "Bob"
+
+
+So far we explored the commands that let you add elements to the list, and LRANGE that let you inspect ranges of the list. A fundamental functionality of Redis lists is the ability to remove, and return to the client at the same time, elements in the head or the tail of the list.
+
+LPOP removes the first element from the list and returns it.
+
+
+    LPOP friends => "Sam"
+RPOP removes the last element from the list and returns it.
+
+
+    RPOP friends => "3"
+Note that the list now only has four element:
+
+
+    LLEN friends => 4
+    LRANGE friends 0 -1 => 1) "Alice" 2) "Bob" 3) "1" 4) "2"
+
+
+Both RPUSH and LPUSH commands are variadic, so you can specify multiple elements in the same command execution.
+
+
+    RPUSH friends 1 2 3 => 6
+Tip: RPUSH and LPUSH return the total length of the list after the operation.
+
+You can also use LLEN to obtain the current length of the list.
+
+
+    LLEN friends => 6
+    
+    
+  The next data structure that we'll look at is a set. A set is similar to a list, except it does not have a specific order and each element may only appear once. Both the data structures are very useful because while in a list is fast to access the elements near the top or the bottom, and the order of the elements is preserved, in a set is very fast to test for membership, that is, to immediately know if a given element was added or not. Moreover in a set a given element can exist only in a single copy.
+
+Some of the important commands in working with sets are SADD, SREM, SISMEMBER, SMEMBERS and SUNION.
+
+SADD adds the given member to the set, again this command is also variadic.
+
+
+    SADD superpowers "flight"
+    SADD superpowers "x-ray vision" "reflexes"
+SREM removes the given member from the set, returning 1 or 0 to signal if the member was actually there or not.
+
+
+    SREM superpowers "reflexes" => 1
+    SREM superpowers "making pizza" => 0
+    
+    
+ SISMEMBER tests if the given value is in the set. It returns 1 if the value is there and 0 if it is not.
+
+
+    SISMEMBER superpowers "flight" => 1
+    SISMEMBER superpowers "reflexes" => 0
+SMEMBERS returns a list of all the members of this set.
+
+
+    SMEMBERS superpowers => 1) "flight", 2) "x-ray vision"
+SUNION combines two or more sets and returns the list of all elements.
+
+
+    SADD birdpowers "pecking"
+    SADD birdpowers "flight"
+    SUNION superpowers birdpowers => 1) "pecking", 2) "x-ray vision", 3) "flight"
+    
+    
+    
+ The return value fo SADD is as important as the one of SREM. If the element we try to add is already inside, then 1 is returned, otherwise SADD returns zero:
+
+
+    SADD superpowers "flight" => 0
+    SADD superpowers "invisibility" => 1
+    
+ 
+ Sets also have a command very similar to LPOP and RPOP in order to extract elements from the set and return them to the client in a single operation. However since sets are not ordered data structures the returned (and removed) elements are totally casual in this case.
+
+
+    SADD letters a b c d e f => 6
+    SPOP letters 2 => 1) "c" 2) "a"
+The argument of SPOP after the name of the key, is the number of elements we want it to return, and remove from the set.
+
+Now the set will have just the remaining elements:
+
+
+    SMEMBERS letters => 1) "b" 2) "d" 3) "e" 4) "f"
+There is also a command to return random elements without removing such elemetns from the set, it is called SRANDMEMBER. You can try it yourself, it works just like SPOP, but if you specify a negative count instead of a positive one, it may also return repeating elements.
+
+
+Sets are a very handy data type, but as they are unsorted they don't work well for a number of problems. This is why Redis 1.2 introduced Sorted Sets.
+
+A sorted set is similar to a regular set, but now each value has an associated score. This score is used to sort the elements in the set.
+
+
+    ZADD hackers 1940 "Alan Kay"
+    ZADD hackers 1906 "Grace Hopper"
+    ZADD hackers 1953 "Richard Stallman"
+    ZADD hackers 1965 "Yukihiro Matsumoto"
+    ZADD hackers 1916 "Claude Shannon"
+    ZADD hackers 1969 "Linus Torvalds"
+    ZADD hackers 1957 "Sophie Wilson"
+    ZADD hackers 1912 "Alan Turing"
+In these examples, the scores are years of birth and the values are the names of famous hackers.
+
+
+    ZRANGE hackers 2 4 => 1) "Claude Shannon", 2) "Alan Kay", 3) "Richard Stallman"
+
+Simple strings, sets and sorted sets already get a lot done but there is one more data type Redis can handle: Hashes.
+
+Hashes are maps between string fields and string values, so they are the perfect data type to represent objects (eg: A User with a number of fields like name, surname, age, and so forth):
+
+
+    HSET user:1000 name "John Smith"
+    HSET user:1000 email "john.smith@example.com"
+    HSET user:1000 password "s3cret"
+To get back the saved data use HGETALL:
+
+
+    HGETALL user:1000
+You can also set multiple fields at once:
+
+
+    HMSET user:1001 name "Mary Jones" password "hidden" email "mjones@example.com"
+If you only need a single field value that is possible as well:
+
+
+    HGET user:1001 name => "Mary Jones"
+    
+
+Numerical values in hash fields are handled exactly the same as in simple strings and there are operations to increment this value in an atomic way.
+
+
+    HSET user:1000 visits 10
+    HINCRBY user:1000 visits 1 => 11
+    HINCRBY user:1000 visits 10 => 21
+    HDEL user:1000 visits
+    HINCRBY user:1000 visits 1 => 1
+Check the full list of Hash commands for more information.
+
+
