@@ -101,6 +101,10 @@
 - [SCAN](https://github.com/collabnix/redisplanet/blob/master/datastore/scan/README.md)
 - [INFO](https://github.com/collabnix/redisplanet/tree/master/advancedapi#info)
 - [CLIENT LIST](https://github.com/collabnix/redisplanet/tree/master/advancedapi#client-list)
+- [STAT](https://github.com/collabnix/redisplanet/blob/master/advancedapi/README.md#continuous-stats-mode)
+- [MONITOR](https://github.com/collabnix/redisplanet/blob/master/advancedapi/README.md#monitor)
+
+
 
 ### Advanced API Implementation
 
@@ -114,7 +118,6 @@
 - [Modules](https://github.com/collabnix/redisplanet/blob/master/advancedapi/modules/README.md)
 
   
-## [Redis CLI Additional Features]()
 
 
 
