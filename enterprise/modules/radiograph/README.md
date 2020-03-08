@@ -106,7 +106,16 @@ How many riders represent team Ducati?
 
 # Concept:
 
-Basic Entity:
+G(V,E) - Vertices & Edges
+
+![My Image]()
+
+Building Blocks
+
+- Nodes
+- Relationships
+- Labels/ Relationship Types
+- Properties
 
 ## Node 
 Simply a reference to Redis Hash
