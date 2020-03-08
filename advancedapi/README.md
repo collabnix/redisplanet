@@ -169,6 +169,7 @@ db0:keys=3,expires=0,avg_ttl=0
 
 # DETAILS
 
+```
 redis_version: Version of the Redis server
 redis_git_sha1: Git SHA1
 redis_git_dirty: Git dirty flag
@@ -218,6 +219,7 @@ mem_fragmentation_ratio: Ratio between used_memory_rss and used_memory
 mem_allocator: Memory allocator, chosen at compile time
 active_defrag_running: Flag indicating if active defragmentation is active
 lazyfree_pending_objects: The number of objects waiting to be freed (as a result of calling UNLINK, or FLUSHDB and FLUSHALL with the ASYNC option)
+```
 
 ## CLIENT LIST
 
