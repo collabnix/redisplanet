@@ -106,9 +106,13 @@
      - [ZRANGEBYSCORE](https://github.com/collabnix/redisplanet/blob/master/datastore/sorted-sets/README.md#example)
      - [ZREMRANGEBYSCORE](https://github.com/collabnix/redisplanet/blob/master/datastore/sorted-sets/README.md#remove-elements-in-range)   
      
- 
 
-### Advanced API introduction
+- [SCAN]()
+  - []()
+
+- []()
+
+
 
 
 
