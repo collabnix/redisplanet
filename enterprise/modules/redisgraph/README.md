@@ -4,6 +4,8 @@ A Graph Database built on top of Redis
 
 ## Why is it needed?
 
+![My Image](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/Screen%20Shot%202020-03-08%20at%208.50.26%20PM.png)
+
 - Facebook Social Media might be using it to connect you to new friends
 - Companies like Ways might be using it find Quickest Route from Home to work
 - Company might be using Graph for Network Load Balancing
