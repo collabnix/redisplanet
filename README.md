@@ -68,10 +68,10 @@
      - [EXISTS](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-1)
      - [DEL](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-1)
    - [Strings with Integer Values](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#string-with-integer-values---incr)
-     - INCR
-     - DECR
-     - INCRBY
-     - DECBRY
+     - [INCR](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-2)
+     - [DECR](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-2)
+     - [INCRBY](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-2)
+     - [DECBRY](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-2)
   - [MSET vs MGET](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#mset-and-mget)
   - [Keys Expiration](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#keys-expiration)
      - [EXPIRE](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-4)
