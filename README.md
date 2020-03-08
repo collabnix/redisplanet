@@ -107,12 +107,13 @@
      - [ZREMRANGEBYSCORE](https://github.com/collabnix/redisplanet/blob/master/datastore/sorted-sets/README.md#remove-elements-in-range)   
      
 
-- [SCAN]()
-  - []()
+- [SCAN](https://github.com/collabnix/redisplanet/blob/master/datastore/scan/README.md)
+ 
 
-- []()
+### Advanced API Implementation
 
-
+- [INFO](https://github.com/collabnix/redisplanet/tree/master/advancedapi#info)
+- [CLIENT LIST](https://github.com/collabnix/redisplanet/tree/master/advancedapi#client-list)
 
 
 
