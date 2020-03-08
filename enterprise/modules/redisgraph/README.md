@@ -133,6 +133,9 @@ How many riders represent team Ducati?
 3) 1) "Query internal execution time: 0.624435 milliseconds"
 ```
 
+Please Note: If you want to visualize Redis Graph, I would recommend using RedisInsight. But for visualizing graph, you will need to integrate RedisGraph nodule onto that Redis Enteprise Docker container.
+
+
 # Concept:
 
 G(V,E) - Vertices & Edges
