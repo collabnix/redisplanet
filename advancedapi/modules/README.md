@@ -10,4 +10,4 @@
 
 ## Examples: Image processing, Full text search, Secure password DB
 
-- For a list of available modules go to Redis Modules 
+- For a list of available modules go to [Redis Modules](redismodules.com/)
