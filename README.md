@@ -62,6 +62,23 @@
 - [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
 - [Key & Value](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#key--value)
 - [Strings](https://github.com/collabnix/redisplanet/blob/master/datastore/strings/README.md)
+   - [SET vs GET](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#set-vs-get)
+   - [SET](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#set-command)
+   - [Altering & Querying](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#altering--querying-redis-keyspace)
+     - [EXISTS](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-1)
+     - [DEL](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-1)
+   - [Strings with Integer Values](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#string-with-integer-values---incr)
+     - INCR
+     - DECR
+     - INCRBY
+     - DECBRY
+  - [MSET vs MGET](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#mset-and-mget)
+  - [Keys Expiration](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#keys-expiration)
+     - [EXPIRE](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-4)
+     - [TTL](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-4)
+  
+  
+  
 - [Lists](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#lists)
   - [Basic API](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#basic-api-of-lists)
     - [LPUSH](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#example)
