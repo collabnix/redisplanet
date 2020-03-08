@@ -1,6 +1,19 @@
 # Redis Graph
 
-A Graph Database built on top of Redis
+A Graph Database built on top of Redis.
+
+RedisGraph is the first queryable Property Graph database to use sparse matrices to represent the adjacency matrix in graphs and linear algebra to query the graph.
+
+## Properties:
+
+- Based on the Property Graph Model
+- Nodes (vertices) and Relationships (edges) that may have attributes
+- Nodes that can be labeled
+- Relationships have a relationship type
+- Graphs represented as sparse adjacency matrices
+- Cypher as query language
+- Cypher queries translated into linear algebra expressions
+
 
 ## Why is it needed?
 
