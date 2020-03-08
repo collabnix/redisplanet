@@ -120,6 +120,7 @@ Building Blocks
 Graph DB - Database with Graph API
 Graph Native DB - Graph DB + Index Free Adjacency (O(1) Vs O(logn)
 
+![My Image](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/Screen%20Shot%202020-03-08%20at%208.24.09%20PM.png)
 
 
 ## Node 
