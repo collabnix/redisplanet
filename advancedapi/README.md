@@ -165,6 +165,60 @@ db0:keys=3,expires=0,avg_ttl=0
 127.0.0.1:6379>
 ```
 
+
+
+# DETAILS
+
+redis_version: Version of the Redis server
+redis_git_sha1: Git SHA1
+redis_git_dirty: Git dirty flag
+redis_build_id: The build id
+redis_mode: The server's mode ("standalone", "sentinel" or "cluster")
+os: Operating system hosting the Redis server
+arch_bits: Architecture (32 or 64 bits)
+multiplexing_api: Event loop mechanism used by Redis
+atomicvar_api: Atomicvar API used by Redis
+gcc_version: Version of the GCC compiler used to compile the Redis server
+process_id: PID of the server process
+run_id: Random value identifying the Redis server (to be used by Sentinel and Cluster)
+tcp_port: TCP/IP listen port
+uptime_in_seconds: Number of seconds since Redis server start
+uptime_in_days: Same value expressed in days
+hz: The server's frequency setting
+lru_clock: Clock incrementing every minute, for LRU management
+executable: The path to the server's executable
+config_file: The path to the config file
+Here is the meaning of all fields in the clients section:
+connected_clients: Number of client connections (excluding connections from replicas)
+client_longest_output_list: longest output list among current client connections
+client_biggest_input_buf: biggest input buffer among current client connections
+blocked_clients: Number of clients pending on a blocking call (BLPOP, BRPOP, BRPOPLPUSH)
+Here is the meaning of all fields in the memory section:
+used_memory: Total number of bytes allocated by Redis using its allocator (either standard libc, jemalloc, or an alternative allocator such as tcmalloc)
+used_memory_human: Human readable representation of previous value
+used_memory_rss: Number of bytes that Redis allocated as seen by the operating system (a.k.a resident set size). This is the number reported by tools such as top(1) and ps(1)
+used_memory_rss_human: Human readable representation of previous value
+used_memory_peak: Peak memory consumed by Redis (in bytes)
+used_memory_peak_human: Human readable representation of previous value
+used_memory_peak_perc: The percentage of used_memory_peak out of used_memory
+used_memory_overhead: The sum in bytes of all overheads that the server allocated for managing its internal data structures
+used_memory_startup: Initial amount of memory consumed by Redis at startup in bytes
+used_memory_dataset: The size in bytes of the dataset (used_memory_overhead subtracted from used_memory)
+used_memory_dataset_perc: The percentage of used_memory_dataset out of the net memory usage (used_memory minus used_memory_startup)
+total_system_memory: The total amount of memory that the Redis host has
+total_system_memory_human: Human readable representation of previous value
+used_memory_lua: Number of bytes used by the Lua engine
+used_memory_lua_human: Human readable representation of previous value
+used_memory_scripts: Number of bytes used by cached Lua scripts
+used_memory_scripts_human: Human readable representation of previous value
+maxmemory: The value of the maxmemory configuration directive
+maxmemory_human: Human readable representation of previous value
+maxmemory_policy: The value of the maxmemory-policy configuration directive
+mem_fragmentation_ratio: Ratio between used_memory_rss and used_memory
+mem_allocator: Memory allocator, chosen at compile time
+active_defrag_running: Flag indicating if active defragmentation is active
+lazyfree_pending_objects: The number of objects waiting to be freed (as a result of calling UNLINK, or FLUSHDB and FLUSHALL with the ASYNC option)
+
 ## CLIENT LIST
 
 
