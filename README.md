@@ -59,6 +59,8 @@
 
 ### Redis Data Store
 
+- [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
+- [Key & Value](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#key--value)
 - Strings
 - Lists
 - Hashes
