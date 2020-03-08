@@ -92,6 +92,8 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 # Example #1: Sana loves Sid
 
+![MY Image](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/Screen%20Shot%202020-03-08%20at%2010.29.11%20PM.png)
+
 We can create this graph using a single command:
 
 
