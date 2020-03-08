@@ -17,3 +17,20 @@
 (integer) 0
 127.0.0.1:6379> 
 ```
+
+# BITMAP BITOP Command
+
+- The BITOP command supports four bitwise operations: 
+   - AND, 
+   - OR, 
+   - XOR and 
+   - NOT
+   
+ Thus the valid forms to call the command are:
+ 
+ ```
+ >BITOP AND destkey srckey1 srckey2 srckey3 ... srckeyN
+>BITOP OR destkey srckey1 srckey2 srckey3 ... srckeyN
+>BITOP XOR destkey srckey1 srckey2 srckey3 ... srckeyN
+>BITOP NOT destkey srckey
+```
