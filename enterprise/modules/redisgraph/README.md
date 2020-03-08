@@ -108,7 +108,7 @@ How many riders represent team Ducati?
 
 G(V,E) - Vertices & Edges
 
-![My Image]()
+![My Image](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/redisgraph1.png)
 
 Building Blocks
 
