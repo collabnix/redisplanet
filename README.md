@@ -76,9 +76,7 @@
   - [Keys Expiration](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#keys-expiration)
      - [EXPIRE](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-4)
      - [TTL](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-4)
-  
-  
-  
+    
 - [Lists](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#lists)
   - [Basic API](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#basic-api-of-lists)
     - [LPUSH](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#example)
@@ -92,7 +90,13 @@
   - [HGET](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hget)
   - [HINCRBY](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hincrby)
   - [HGETALL](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hgetall)
-- Sets
+
+- [Sets](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md)
+ - [SUNION](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sunion)
+ - [SINTER](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sinter)
+ - [SDIFF](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sdiff)
+
+ 
 - Sorted Set
 
 ### Advanced API introduction
