@@ -57,3 +57,51 @@
 8) "foo bar"
 127.0.0.1:6379>
 ```
+
+
+# RPOP and LPOP
+
+
+Popping elements is the operation of both 
+ - retrieving the element from the list, and 
+ - eliminating it from the list
+ 
+ 
+```
+127.0.0.1:6379> lrange mylist 0 -1
+1) "first"
+2) "A"
+3) "B"
+4) "2"
+5) "3"
+6) "4"
+7) "5"
+8) "foo bar"
+127.0.0.1:6379> rpush mylist a b c
+(integer) 11
+127.0.0.1:6379> rpop mylist
+"c"
+127.0.0.1:6379> rpop mylist
+"b"
+127.0.0.1:6379> rpop mylist
+"a"
+127.0.0.1:6379> rpop mylist
+"foo bar"
+127.0.0.1:6379>
+```
+
+
+## Common Usage of Lists
+
+- Remember the latest updates posted by users into a social network
+
+- Communication between processes 
+  - using a consumer-producer pattern where the producer pushes items into a list, and a consumer (usually a worker) consumes those items and executed actions 
+  
+  
+          LPUSH                      RPOP
+Producer  ======> | M3 | M2 | M1 |  ========> Consumer
+
+
+  - Redis has special list commands to make this use case both more reliable and efficient
+ BRPOP and BLPOP are blocking xPOP operation which will wait for a value to be in the list 
