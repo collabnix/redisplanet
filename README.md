@@ -97,7 +97,9 @@
    - [SDIFF](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sdiff)
 
  
-- Sorted Set
+- [Sorted Set](https://github.com/collabnix/redisplanet/blob/master/datastore/sorted-sets/README.md)
+  - []()
+  - []()
 
 ### Advanced API introduction
 
