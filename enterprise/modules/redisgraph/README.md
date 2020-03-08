@@ -117,6 +117,11 @@ Building Blocks
 - Labels/ Relationship Types
 - Properties
 
+Graph DB - Database with Graph API
+Graph Native DB - Graph DB + Index Free Adjacency (O(1) Vs O(logn)
+
+
+
 ## Node 
 Simply a reference to Redis Hash
 
