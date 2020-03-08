@@ -158,4 +158,16 @@ id=17 addr=127.0.0.1:36238 fd=8 name= age=1086 idle=0 flags=N db=0 sub=0 psub=0 
 127.0.0.1:6379> 
 ```
 
-## 
+## Redis CLI
+
+- Monitoring tool to show continuous stats about a Redis server
+- Scanning a Redis database for very large keys
+- Key space scanner with pattern matching
+- Acting as a Pub/Sub client to subscribe to channels
+- Monitoring the commands executed into a Redis instance
+- Checking the latency of a Redis server in different ways
+- Checking the scheduler latency of the local computer
+- Transferring RDB backups from a remote Redis server locally
+- Acting as a Redis slave for showing what a slave receives
+- Simulating LRU workloads for showing stats about keys hits
+- A client for the Lua debugger
