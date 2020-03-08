@@ -114,6 +114,10 @@
 - [Modules](https://github.com/collabnix/redisplanet/blob/master/advancedapi/modules/README.md)
 
   
+## [Redis CLI Additional Features]()
+
+
+
 ### Redis Technology Stack 
 
   - [TBD]()
