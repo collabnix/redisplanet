@@ -46,3 +46,15 @@ Returns the members of the set resulting  from the difference between the firs
 5) "d"
 127.0.0.1:6379>
 ```
+
+```
+127.0.0.1:6379> sdiff key1 key2
+1) "a"
+2) "b"
+127.0.0.1:6379> sdiff key2 key1
+1) "e"
+2) "d"
+127.0.0.1:6379> sinter key1 key2
+1) "c"
+127.0.0.1:6379> 
+```
