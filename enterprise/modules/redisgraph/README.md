@@ -90,6 +90,20 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 ```
 
 
+# Example #1: Sana loves Sid
+
+We can create this graph using a single command:
+
+
+> GRAPH.QUERY RainaLovesSpikey "CREATE (Sana:Person {name: 'Sana'})-[:loves]->(Sid:Person {name: 'Sid'})"
+
+When using redis-cli, queries will also follow the format of GRAPH.QUERY <key> "<cypher_query>". In RedisGraph, a graph is stored in a Redis key (in this case called “SanaLovesSid“) with the special type graphdata, thus this must always be specified in queries. The query itself is the part between double quotes, and uses a language called Cypher. Cypher is also used by Neo4j among other software, and RedisGraph implements a subset of it.
+  
+Cypher represents nodes and relationships using a sort of ASCII art. Nodes are represented by round brackets (parentheses), and relationships are represented by square brackets. The arrow indicates the direction of the relationship. RedisGraph at present does not support undirected relationships. When you run the above command, Redis should provide some output indicating what happened:
+
+
+
+
 Here we'll quickly create a small graph representing a subset of motorcycle riders and teams taking part in the MotoGP league. Once created, we'll start querying our data.
 
 ```
