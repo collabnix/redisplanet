@@ -92,9 +92,9 @@
   - [HGETALL](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hgetall)
 
 - [Sets](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md)
- - [SUNION](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sunion)
- - [SINTER](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sinter)
- - [SDIFF](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sdiff)
+   - [SUNION](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sunion)
+   - [SINTER](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sinter)
+   - [SDIFF](https://github.com/collabnix/redisplanet/blob/master/datastore/set/README.md#sdiff)
 
  
 - Sorted Set
