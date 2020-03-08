@@ -111,3 +111,31 @@ Producer  =======> | M3 | M2 | M1 |  =========> Consumer
 Producer  =======> | M3 | M2 | M1 |  =========> Consumer
 
 
+## Capped Lists using LTRIM
+
+
+- Use the LTRIM command to use lists as a capped collection, 
+- Only remembering the latest N items and discarding all the oldest items
+
+
+## Example:
+
+```
+127.0.0.1:6379> flushall
+OK
+127.0.0.1:6379> rpush mylist 1 2 3 4 5 
+(integer) 5
+127.0.0.1:6379> lrange mylist 0 -1
+1) "1"
+2) "2"
+3) "3"
+4) "4"
+5) "5"
+127.0.0.1:6379> ltrim mylist 0 2
+OK
+127.0.0.1:6379> lrange mylist 0 -1
+1) "1"
+2) "2"
+3) "3"
+127.0.0.1:6379> 
+```
