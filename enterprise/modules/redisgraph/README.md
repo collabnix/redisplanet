@@ -101,12 +101,66 @@ We can create this graph using a single command:
 GRAPH.QUERY SanalovesSid "CREATE (Sana:Person {name: 'Sana'})-[:loves]->(Sid:Person {name: 'Sid'})"
 ```
 
+```
+root@5be381521ac3:/data# redis-cli
+127.0.0.1:6379> GRAPH.QUERY SanalovesSid "CREATE (Sana:Person {name: 'Sana'})-[:loves]->(Sid:Person {name: 'Sid'})"
+1) 1) "Labels added: 1"
+   2) "Nodes created: 2"
+   3) "Properties set: 2"
+   4) "Relationships created: 1"
+   5) "Query internal execution time: 1.974615 milliseconds"
+```
+
+
+
 When using redis-cli, queries will also follow the format of GRAPH.QUERY <key> "<cypher_query>". In RedisGraph, a graph is stored in a Redis key (in this case called “SanaLovesSid“) with the special type graphdata, thus this must always be specified in queries. The query itself is the part between double quotes, and uses a language called Cypher. Cypher is also used by Neo4j among other software, and RedisGraph implements a subset of it.
   
 Cypher represents nodes and relationships using a sort of ASCII art. Nodes are represented by round brackets (parentheses), and relationships are represented by square brackets. The arrow indicates the direction of the relationship. RedisGraph at present does not support undirected relationships. When you run the above command, Redis should provide some output indicating what happened:
 
+Since our graph has been created, we can start running queries against it. For this, we use the MATCH keyword:
 
 
+```
+127.0.0.1:6379> GRAPH.QUERY SanalovesSid "MATCH (x) RETURN x"
+1) 1) "x"
+2) 1) 1) 1) 1) "id"
+            2) (integer) 0
+         2) 1) "labels"
+            2) 1) "Person"
+         3) 1) "properties"
+            2) 1) 1) "name"
+                  2) "Sana"
+   2) 1) 1) 1) "id"
+            2) (integer) 1
+         2) 1) "labels"
+            2) 1) "Person"
+         3) 1) "properties"
+            2) 1) 1) "name"
+                  2) "Sid"
+3) 1) "Query internal execution time: 0.588304 milliseconds"
+127.0.0.1:6379>
+```
+
+As you can see, this has given us the whole structure of each node. If we just want to get something specific, such as the name, then we can specify it in the RETURN clause:
+
+```
+127.0.0.1:6379> GRAPH.QUERY SanalovesSid "MATCH (x) RETURN x.name "
+1) 1) "x.name"
+2) 1) 1) "Sana"
+   2) 1) "Sid"
+3) 1) "Query internal execution time: 0.714206 milliseconds"
+```
+
+We can also query based on relationships. Let’s see who loves who:
+
+```
+127.0.0.1:6379> GRAPH.QUERY SanalovesSid "MATCH (x)-[:loves]->(y) RETURN x.name, y.name"
+1) 1) "x.name"
+   2) "y.name"
+2) 1) 1) "Sana"
+      2) "Sid"
+3) 1) "Query internal execution time: 1.080608 milliseconds"
+```
 
 Here we'll quickly create a small graph representing a subset of motorcycle riders and teams taking part in the MotoGP league. Once created, we'll start querying our data.
 
