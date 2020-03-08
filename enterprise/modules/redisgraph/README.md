@@ -10,6 +10,20 @@ A Graph Database built on top of Redis
 - Companies like Ways might be using it find Quickest Route from Home to work
 - Company might be using Graph for Network Load Balancing
 
+Based on GRAPHBLAS technology
+
+## Why GraphBLAS?
+
+- Traversing nodes and edges one a time; no scope for library optimization
+- Linear algebra: “bulk” work can be given to library
+- Let the experts write the library kernels: fast, robust, portables, performance
+- Composable linear algebra : associative, distributive, (AB)^T= B^T A^T
+
+
+What else can you do?
+
+- Further boost with performance with GPU
+- True Distributed Graph with linear algebra operations
 
 # Using RedisGraph using Docker
 
