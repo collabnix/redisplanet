@@ -99,9 +99,15 @@ Popping elements is the operation of both
   - using a consumer-producer pattern where the producer pushes items into a list, and a consumer (usually a worker) consumes those items and executed actions 
   
   
-          LPUSH                      RPOP
-Producer  ======> | M3 | M2 | M1 |  ========> Consumer
+          LPUSH                        RPOP
+Producer  =======> | M3 | M2 | M1 |  =========> Consumer
 
 
   - Redis has special list commands to make this use case both more reliable and efficient
  BRPOP and BLPOP are blocking xPOP operation which will wait for a value to be in the list 
+
+
+          LPUSH                        BRPOP
+Producer  =======> | M3 | M2 | M1 |  =========> Consumer
+
+
