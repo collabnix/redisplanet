@@ -38,11 +38,12 @@ With the help of Hexastore
      
 We store all 6 permutation of the relationship
 
+```
 SPO
 SOP
 OPS                       Linus visit Finland
 OSP                         (S)  (P)  (0)
 PSO
 POS
-
+```
 
