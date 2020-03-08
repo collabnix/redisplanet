@@ -61,7 +61,7 @@
 
 - [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
 - [Key & Value](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#key--value)
-- Strings
+- [Strings](https://github.com/collabnix/redisplanet/blob/master/datastore/strings/README.md)
 - Lists
 - Hashes
 - Sets
