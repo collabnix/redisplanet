@@ -32,9 +32,11 @@ Linus. =============. VISIT. =====================.  Finland
 
 With the help of Hexastore
 
-  Subject.   Predicate            Object
+```
+Subject.   Predicate            Object
      S           P                  0
-     
+```
+
      
 We store all 6 permutation of the relationship
 
