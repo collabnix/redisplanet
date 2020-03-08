@@ -57,26 +57,24 @@
 
 
 
-### Redis Data Store
+### Redis Data Store | API
 
 - [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
 - [Key & Value](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#key--value)
 - [Strings](https://github.com/collabnix/redisplanet/blob/master/datastore/strings/README.md)
 - [Lists](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md)
-- [Hashes](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md)
+- [Hashes](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hashes)
+  - [HSET](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hset)
+  - [HGET](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hget)
+  - [HINCRBY](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hincrby)
+  - [HGETALL](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hgetall)
 - Sets
 - Sorted Set
 
 ### Advanced API introduction
 
 
-### Redis CLI additional Features
 
-- [Hashes](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md)
-  - [HSET](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hset)
-  - [HGET](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hget)
-  - [HINCRBY](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hincrby)
-  - [HGETALL](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hgetall)
   
 ### Redis Technology Stack 
 
