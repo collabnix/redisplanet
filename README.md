@@ -57,7 +57,19 @@
 
 
 
-### Redis Data Structure
+### Redis Data Store
+
+- Strings
+- Lists
+- Hashes
+- Sets
+- Sorted Set
+
+### Advanced API introduction
+
+
+### Redis CLI additional Features
+
 - [Hashes](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md)
   - [HSET](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hset)
   - [HGET](https://github.com/collabnix/redis/blob/master/datastructure/hashes/README.md#hget)
