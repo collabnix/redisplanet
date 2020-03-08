@@ -171,3 +171,56 @@ id=17 addr=127.0.0.1:36238 fd=8 name= age=1086 idle=0 flags=N db=0 sub=0 psub=0 
 - Acting as a Redis slave for showing what a slave receives
 - Simulating LRU workloads for showing stats about keys hits
 - A client for the Lua debugger
+
+
+## Continuous stats mode
+
+- A new line is printed every second with useful information and the difference between the old data point
+- Use -i <interval> to control the frequency
+
+```
+ubuntu@ip-172-31-25-81:~$ redis-cli --stat
+------- data ------ --------------------- load -------------------- - child -
+keys       mem      clients blocked requests            connections          
+7          834.58K  1       0       132 (+0)            16          
+7          834.58K  1       0       133 (+1)            16          
+7          834.58K  1       0       134 (+1)            16          
+7          834.58K  1       0       135 (+1)            16          
+7          834.58K  1       0       136 (+1)            16          
+7          834.58K  1       0       137 (+1)            16          
+7          834.58K  1       0       138 (+1)            16          
+7          834.58K  1       0       139 (+1)            16          
+7          834.58K  1       0       140 (+1)            16          
+7          834.58K  1       0       141 (+1)            16          
+7          834.58K  1       0       142 (+1)            16          
+7          834.58K  1       0       143 (+1)            16          
+7          834.58K  1       0       144 (+1)            16          
+7          834.58K  1       0       145 (+1)            16          
+7          834.58K  1       0       146 (+1)            16          
+7          834.58K  1       0       147 (+1)            16          
+7          834.58K  1       0       148 (+1)            16          
+7          834.58K  1       0       149 (+1)            16          
+7          834.58K  1       0       150 (+1)            16          
+7          834.58K  1       0       151 (+1)            16          
+------- data ------ --------------------- load -------------------- - child -
+keys       mem      clients blocked requests            connections          
+7          834.58K  1       0       152 (+1)            16          
+7          834.58K  1       0       153 (+1)            16          
+7          834.58K  1       0       154 (+1)            16          
+
+```
+
+## MONITOR
+
+Monitoring commands executed in Redis
+
+```
+ubuntu@ip-172-31-25-81:~$ redis-cli monitor
+OK
+```
+
+For more info on more usages and API http://redis.io/topics/rediscli 
+
+
+
+
