@@ -8,3 +8,5 @@
 - Keyspace notifications allows clients to subscribe to Pub/Sub channels and receive events affecting the Redis data set in 
 some way
 
+![My Image](https://github.com/collabnix/redisplanet/blob/master/advancedapi/pubsub/pubsub.png)
+
