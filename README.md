@@ -125,7 +125,9 @@
 - [RedisGraph](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/README.md)
 - [RedisJSON]()
 - [RediSearch]()
-
+  - [Search, Caching & Streams demo based on data from discogs.com using Docker](https://github.com/collabnix/rediscogs)
+- [RedisGears]()
+  - [RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
 
 ### Redis Technology Stack 
 
