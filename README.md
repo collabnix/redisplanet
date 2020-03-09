@@ -122,7 +122,7 @@
 ## Redis Enterprise Modules
 
 - [RedisBloom]()
-- [RedisGraph]()
+- [RedisGraph](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/README.md)
 - [RedisJSON]()
 - [RediSearch]()
 
