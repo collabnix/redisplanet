@@ -35,8 +35,14 @@
 
 ## Features
 
-- [Is Redis In-memory Database?](https://github.com/collabnix/redisplanet/tree/master/oss/feature/in-memory#what-do-you-mean-when-you-say-in-memory-database)
-- [What is difference between Memcached Vs Redis Database?]()
+- [Is Redis In-memory Database?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#what-do-you-mean-when-you-say-in-memory-database)
+- [Similarity between Redis Vs Memcached](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#similarity-between-memcached-vs-in-memory-database)
+- [Why Memcached & Redis so popular](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#why-are-memcached-and-redis-so-popular)
+- [When to use Memcached?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#when-to-use-memcached)
+- [What to use Redis?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#when-to-use-redis)
+- [Redis for data persistence](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-for-data-persistence)
+- [Redis for In-memory Data Replication](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-in-memory-data-replication)
+- [What is difference between Memcached Vs Redis Database?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-vs-memcached)
 
 ### Redis Data Store | API
 
