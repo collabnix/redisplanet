@@ -100,4 +100,14 @@ Redis and Memcached are both in-memory data storage systems. Memcached is a high
 ## Reference: [Link](https://medium.com/@Alibaba_Cloud/redis-vs-memcached-in-memory-data-storage-systems-3395279b0941)
 
 
-## 
+## Redis in-memory data replication 
+
+- Redis can also replicate the data that it manages. 
+- Replication can be used for implementing a highly available cache setup that can withstand failures and provide uninterrupted service to the application. 
+- A cache failure falls only slightly short of application failure in terms of the impact on user experience and application performance, so having a proven solution that guarantees the cache’s contents and service availability is a major advantage in most cases.
+
+- Last but not least, in terms of operational visibility, Redis provides a slew of metrics and a wealth of introspective commands with which to monitor and track usage and abnormal behavior. 
+- Real-time statistics about every aspect of the database, the display of all commands being executed, the listing and managing of client connections—Redis has all that and more.
+
+- When developers realize the effectiveness of Redis’s persistence and in-memory replication capabilities, they often use it as a first-responder database, usually to analyze and process high-velocity data and provide responses to the user while a secondary (often slower) database maintains a historical record of what happened. 
+- When used in this manner, Redis can also be ideal for analytics use cases.
