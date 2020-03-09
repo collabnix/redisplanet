@@ -60,6 +60,10 @@ Using the first design, the requests took a whooping 5 minutes while using the s
 This isn't just about speed! Imagine what difference it would make to your users and how much money you could save on server costs.
 
 
+
+# Data Structure
+
+
 As a first example, we can use the command SET to store the value "fido" at key "server:name":
 
 
