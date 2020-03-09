@@ -127,7 +127,7 @@
 - [RediSearch]()
   - [Search, Caching & Streams demo based on data from discogs.com using Docker](https://github.com/collabnix/rediscogs)
 - [RedisGears]()
-  - [RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
+  - [Animal Recognition Demo using RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
 
 ### Redis Technology Stack 
 
