@@ -7,6 +7,58 @@
 - This data can later be retrieved only if we know the exact key used to store it.
 - Often Redis it is called a data structure server because it has outer key-value shell, but each value can contain a complex data structure, such as a string, a list, a hashes, or ordered data structures called sorted sets as well as probabilistic data structures like hyperloglog.
 
+- Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.
+- Redis stores data using a key-value system and, as such, it is very easy to retrieve data since there are no complicated relationships or other operations making relational databases slow.
+
+# What is Redis Good for?
+
+Redis can be used for a number of things such as:
+
+- Caching
+- Counting
+- Queues
+- Pub and Sub
+
+# What is Caching?
+
+Caching is the process of storing data into a cache. A cache is a temporary data store where data is kept for later use.
+
+A cache as a data store is easier for the client (or server) to reach, as opposed to a permanent data store that might be located on a different service, which takes more time and resources to reach (a database or an external API endpoint).
+
+
+# How Caching Works.
+
+The image below is not 100% accurate, since there is a lot going on under the hood and I had to keep it as simple as possible.
+
+
+
+
+
+In the first illustration, the server queries the database every time a request for profile information comes from the client (Mr. Jide).
+
+Let's assume Mr. Jide requests this data 30 times during his browsing session and each request takes 10 seconds to complete, the response time for all of the request-response times remain constant.
+
+10secs * 30requests = 5 minutes.
+
+In the second illustration, the server looks into the cache whenever Mr. Jide requests profile information and queries the database only if the data is not available in the cache (Redis).
+
+One advantage of the second design over the first is that the response time for subsequent requests for the same data is shorter, since the data has been cached in memory (Redis) so there is no need to query the database, which is an expensive operation.
+
+We also use less server resources, leading to an improvement in application performance.
+
+Compared to querying the database, getting data from the cache is easier and faster for the server.
+
+For the second design, let's assume the request-response cycle takes 5 seconds (after the first call), and Mr. Jide requests this data 30 times. How much time will the 30 requests take?
+
+10secs * 1request = 10 seconds (Initial Request)
+5secs * 29requests = 145seconds (Subsequent Requests)
+Total: 10secs + 145secs = 2mins 35secs
+
+Using the first design, the requests took a whooping 5 minutes while using the second design, the total trip time was 2mins 35secs.
+
+This isn't just about speed! Imagine what difference it would make to your users and how much money you could save on server costs.
+
+
 As a first example, we can use the command SET to store the value "fido" at key "server:name":
 
 
