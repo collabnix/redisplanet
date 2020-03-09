@@ -31,7 +31,8 @@ A cache as a data store is easier for the client (or server) to reach, as oppose
 The image below is not 100% accurate, since there is a lot going on under the hood and I had to keep it as simple as possible.
 
 
-
+![My Image](https://github.com/collabnix/redisplanet/blob/master/oss/Screen%20Shot%202020-03-09%20at%203.14.14%20PM.png)
+![My Image](https://github.com/collabnix/redisplanet/blob/master/oss/Screen%20Shot%202020-03-09%20at%203.14.20%20PM.png)
 
 
 In the first illustration, the server queries the database every time a request for profile information comes from the client (Mr. Jide).
