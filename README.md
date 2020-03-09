@@ -33,6 +33,10 @@
 - [Everything You Want to Know about Redis.conf](https://github.com/collabnix/redisplanet/blob/master/Redis-conf/README.md)
 
 
+## Features
+
+- [Is Redis In-memory Database?](https://github.com/collabnix/redisplanet/tree/master/oss/feature/in-memory#what-do-you-mean-when-you-say-in-memory-database)
+
 
 ### Redis Data Store | API
 
