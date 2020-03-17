@@ -10,7 +10,7 @@ id2,1528961484,50.1,50.0
 
 
 ```
-cat data.csv | awk -F "," '{print $1" "$2" "$3" "$4}' | xargs -n4 sh -c 'redis-cli -h ajeet-1shard-noreplication.8mys2u.ng.0001.use2.cache.amazonaws.com -p 6379 zadd $1 $2 "$3,$4"' sh
+cat data.csv | awk -F "," '{print $1" "$2" "$3" "$4}' | xargs -n4 sh -c 'redis-cli -h 127.0.0.1 -p 6379 zadd $1 $2 "$3,$4"' sh
 ```
 
 
