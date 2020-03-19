@@ -50,6 +50,7 @@
 - [Key & Value](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#key--value)
 - [Strings](https://github.com/collabnix/redisplanet/blob/master/datastore/strings/README.md)
    - [SET vs GET](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#set-vs-get)
+    -  [Python Script to use SET operation](https://github.com/collabnix/redisplanet/blob/master/python/push.py)
    - [SET](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#set-command)
    - [Altering & Querying](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#altering--querying-redis-keyspace)
      - [EXISTS](https://github.com/collabnix/redisplanet/tree/master/datastore/strings#example-1)
