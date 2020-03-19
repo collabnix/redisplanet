@@ -75,7 +75,7 @@
     - [LTRIM](https://github.com/collabnix/redisplanet/blob/master/datastore/lists/README.md#capped-lists-using-ltrim)
 - [Hashes](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hashes)
   - [HSET](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hset)
-     - [Python Script to push hash keys into Redid Database and retrieving it seamlessly](https://github.com/collabnix/redisplanet/blob/master/python/push-catalog.py)
+     - [Python Script to push hash keys into Redis Database and retrieving it seamlessly](https://github.com/collabnix/redisplanet/blob/master/python/push-catalog.py)
   - [HGET](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hget)
   - [HINCRBY](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hincrby)
   - [HGETALL](https://github.com/collabnix/redisplanet/blob/master/datastore/hashes/README.md#hgetall)
