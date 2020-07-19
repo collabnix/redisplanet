@@ -141,14 +141,25 @@
 - [RedisGears]()
   - [Animal Recognition Demo using RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
 
+
+## Use cases
+
+### Caching:
+
+ -  [Cache Your NodeJS application with Redis in 6 Minutes](https://itnext.io/learn-to-cache-your-nodejs-application-with-redis-in-6-minutes-745a574a9739)
+
+
+
+
 ### Redis Technology Stack 
 
   - [TBD]()
   
 
-### Redis Ready Solution 
+### Redis Monitoring
 
-  - [TBD]()
+  - [Monitoring Redis Enterprise using Instana](https://www.instana.com/blog/monitoring-redis-enterprise-using-instana/)
+  
 
 
 
