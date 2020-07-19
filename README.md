@@ -33,7 +33,7 @@
 - [Everything You Want to Know about Redis.conf](https://github.com/collabnix/redisplanet/blob/master/Redis-conf/README.md)
 
 
-## Features
+## Features & FAQs
 
 - [Is Redis In-memory Database?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#what-do-you-mean-when-you-say-in-memory-database)
 - [Similarity between Redis Vs Memcached](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#similarity-between-memcached-vs-in-memory-database)
@@ -43,6 +43,7 @@
 - [Redis for data persistence](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-for-data-persistence)
 - [Redis for In-memory Data Replication](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-in-memory-data-replication)
 - [What is difference between Memcached Vs Redis Database?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-vs-memcached)
+- [Redis is a single-threaded. How can I acheive max throughput?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-a-single-threaded)
 
 ### Redis Data Store | API
 
