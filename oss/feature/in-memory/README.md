@@ -116,3 +116,8 @@ Redis and Memcached are both in-memory data storage systems. Memcached is a high
 
 - When developers realize the effectiveness of Redis’s persistence and in-memory replication capabilities, they often use it as a first-responder database, usually to analyze and process high-velocity data and provide responses to the user while a secondary (often slower) database maintains a historical record of what happened. 
 - When used in this manner, Redis can also be ideal for analytics use cases.
+
+
+# Redis is a single threaded. How to get maximum throughput?
+
+A shard is an open source Redis instance. Redis, being a single-threaded process, runs on one CPU core. You could maximize your throughput by running a shard on each CPU core.
