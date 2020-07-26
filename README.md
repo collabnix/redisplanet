@@ -1,4 +1,56 @@
-# Redisplanet - An Ultimate Redis Hands-On Labs
+# Redisplanet - A Curated List of Redis Enterprise Cloud | Redis Enterprise | Redis OSS
+
+## Redis Enterprise Software
+
+### Installation
+
+ - Linux
+   - [Installing Redis Enterprise on Ubuntu Linux](https://collabnix.github.io/redisplanet/ee/install/)
+ - Windows
+ - MacOS
+   - [3 Node Redis Enterprise Cluster using Docker Desktop for Mac](http://collabnix.com/3-node-redis-enterprise-cluster-using-docker-desktop/)
+ - Docker
+   - [Setting up Redis Enterprise Software on Docker](https://github.com/collabnix/redis/blob/master/docker/README.md)<br>
+   - [Installing RedisInSight & Connect to Redis Enterprise Software](https://github.com/collabnix/redis/blob/master/docker/README.md#running-redinsight)<br>
+   - [3 Node Active-Active Redis Enterprise Cluster for Developers using Docker Desktop](http://collabnix.com/3-node-redis-enterprise-cluster-using-docker-desktop/)
+     
+## Redis Enterprise Cloud 
+
+If you're looking out for fully managed cloud service, hosted or in your VPC, check out [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise-cloud/) . You can sign up for a free account [here](https://redislabs.com/redis-enterprise-cloud/) and get 30MB free tier at no charge. Use the button below to register yourself and get started in no seconds. 
+
+[![](https://github.com/collabnix/redisplanet/blob/master/images/recloud.png)](https://app.redislabs.com/#/add-subscription)
+
+
+
+## Redis Enterprise Modules
+
+- [RedisBloom]()
+- [RedisGraph](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/README.md)
+- [RedisJSON]()
+- [RediSearch]()
+  - [Search, Caching & Streams demo based on data from discogs.com using Docker](https://github.com/collabnix/rediscogs)
+- [RedisGears]()
+  - [Animal Recognition Demo using RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
+
+
+## Use cases
+
+### Caching:
+
+ -  [Cache Your NodeJS application with Redis in 6 Minutes](https://itnext.io/learn-to-cache-your-nodejs-application-with-redis-in-6-minutes-745a574a9739)
+
+
+
+
+### Redis Technology Stack 
+
+  - [TBD]()
+  
+
+### Redis Monitoring
+
+  - [Monitoring Redis Enterprise using Instana](https://www.instana.com/blog/monitoring-redis-enterprise-using-instana/)
+
 
 ## Redis Open Source
 
@@ -117,56 +169,7 @@
 - [Modules](https://github.com/collabnix/redisplanet/blob/master/advancedapi/modules/README.md)
 
 
-## Redis Enterprise Software
 
-### Installation
-
- - Linux
-   - [Installing Redis Enterprise on Ubuntu Linux](https://collabnix.github.io/redisplanet/ee/install/)
- - Windows
- - MacOS
-   - [3 Node Redis Enterprise Cluster using Docker Desktop for Mac](http://collabnix.com/3-node-redis-enterprise-cluster-using-docker-desktop/)
- - Docker
-   - [Setting up Redis Enterprise Software on Docker](https://github.com/collabnix/redis/blob/master/docker/README.md)<br>
-   - [Installing RedisInSight & Connect to Redis Enterprise Software](https://github.com/collabnix/redis/blob/master/docker/README.md#running-redinsight)<br>
-   - [3 Node Active-Active Redis Enterprise Cluster for Developers using Docker Desktop](http://collabnix.com/3-node-redis-enterprise-cluster-using-docker-desktop/)
-     
-## Redis Enterprise Cloud 
-
-If you're looking out for fully managed cloud service, hosted or in your VPC, check out [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise-cloud/) . You can sign up for a free account [here](https://redislabs.com/redis-enterprise-cloud/) and get 30MB free tier at no charge. Use the button below to register yourself and get started in no seconds. 
-
-[![](https://github.com/collabnix/redisplanet/blob/master/images/recloud.png)](https://app.redislabs.com/#/add-subscription)
-
-
-
-## Redis Enterprise Modules
-
-- [RedisBloom]()
-- [RedisGraph](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/README.md)
-- [RedisJSON]()
-- [RediSearch]()
-  - [Search, Caching & Streams demo based on data from discogs.com using Docker](https://github.com/collabnix/rediscogs)
-- [RedisGears]()
-  - [Animal Recognition Demo using RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
-
-
-## Use cases
-
-### Caching:
-
- -  [Cache Your NodeJS application with Redis in 6 Minutes](https://itnext.io/learn-to-cache-your-nodejs-application-with-redis-in-6-minutes-745a574a9739)
-
-
-
-
-### Redis Technology Stack 
-
-  - [TBD]()
-  
-
-### Redis Monitoring
-
-  - [Monitoring Redis Enterprise using Instana](https://www.instana.com/blog/monitoring-redis-enterprise-using-instana/)
   
 
 
