@@ -137,11 +137,6 @@ If you're looking out for fully managed cloud service, hosted or in your VPC, ch
 
 [![](https://github.com/collabnix/redisplanet/blob/master/images/recloud.png)](https://app.redislabs.com/#/add-subscription)
 
-You can learn more about this deployment option along with a step-by-step guide in this [recent blog post](https://www.balena.io/blog/using-opendatacam-and-balena-to-quantify-the-world-with-ai/), or [view a screencast](https://www.youtube.com/watch?v=YfRvUeSLi0M&t=44m45s) of the deployment in action.
-
-__(optional) Upgrade OpenDataCam__
-
-
 
 
 ## Redis Enterprise Modules
