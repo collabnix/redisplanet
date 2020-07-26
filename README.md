@@ -131,6 +131,18 @@
    - [Installing RedisInSight & Connect to Redis Enterprise Software](https://github.com/collabnix/redis/blob/master/docker/README.md#running-redinsight)<br>
    - [3 Node Active-Active Redis Enterprise Cluster for Developers using Docker Desktop](http://collabnix.com/3-node-redis-enterprise-cluster-using-docker-desktop/)
      
+## Redis Enterprise Cloud 
+
+If you're looking out for fully managed cloud service, hosted or in your VPC, check out [Redis Enterprise Cloud](https://redislabs.com/redis-enterprise-cloud/) . You can sign up for a free account [here](https://redislabs.com/redis-enterprise-cloud/) and get 30MB free tier at no charge. Use the button below to register yourself and get started in no seconds. 
+
+[![](https://github.com/collabnix/redisplanet/images/recloud.png)]https://app.redislabs.com/#/add-subscription)
+
+You can learn more about this deployment option along with a step-by-step guide in this [recent blog post](https://www.balena.io/blog/using-opendatacam-and-balena-to-quantify-the-world-with-ai/), or [view a screencast](https://www.youtube.com/watch?v=YfRvUeSLi0M&t=44m45s) of the deployment in action.
+
+__(optional) Upgrade OpenDataCam__
+
+
+
 
 ## Redis Enterprise Modules
 
