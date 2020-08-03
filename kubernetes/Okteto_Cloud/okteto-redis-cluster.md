@@ -2,6 +2,18 @@
 
 If the cluster configuration of a redis node is lost in some way, it will come back with a different ID, which upsets the balance in the cluster (and probably in the Force). To prevent this, the setup uses a combination of Kubernetes StatefulSets and PersistentVolumeClaims to make sure the state of the cluster is maintained after rescheduling or failures.
 
+# install okteto cli 
+```
+curl https://get.okteto.com -sSfL | sh
+
+```
+# create okteto cloud account
+https://cloud.okteto.com/
+
+```
+okteto login
+```
+
 ## Setup
 ``` bash
 kubectl apply -f https://raw.githubusercontent.com/collabnix/redisplanet/master/kubernetes/Okteto_Cloud/redis-cluster.yml
