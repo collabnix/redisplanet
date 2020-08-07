@@ -1,4 +1,4 @@
-# Redisplanet - A Curated List of Redis Enterprise Cloud | Redis Enterprise | Redis OSS
+# Redisplanet - A Curated List of Redis Resources
 
 
 
