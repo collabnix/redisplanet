@@ -149,7 +149,8 @@ If you're looking out for fully managed cloud service, hosted or in your VPC, ch
   - [Search, Caching & Streams demo based on data from discogs.com using Docker](https://github.com/collabnix/rediscogs)
 - [RedisGears]()
   - [Animal Recognition Demo using RedisGears, Streams, AI](https://github.com/collabnix/AnimalRecognitionDemo)
-
+- [RedisAI]()
+  - [Installing RedisAI on Jetson Nano](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/README.md)
 
 ## Use cases
 
