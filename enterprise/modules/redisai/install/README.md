@@ -79,9 +79,6 @@ It will take sometime based on your internet speed.
 ## Testing RedisAI 
 
 
-```
-sh test_redisai.sh
-```
 
 ```
 sh test_redisai.sh 
