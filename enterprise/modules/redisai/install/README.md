@@ -17,7 +17,7 @@ git clone --recursive https://github.com/RedisAI/RedisAI
 cd RedisAI
 ```
 
-Copy all the below scripts under RedisAI directory and execute these scripts in this order:
+Download all the below scripts and place it under RedisAI directory.
 
 - [install_redisai.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/install_rediai.sh)
 - [run_redisai_torch-sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/run_redisai_torch-sh)
