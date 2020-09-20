@@ -72,13 +72,25 @@ It will take sometime based on your internet speed.
 ```
 
 
-
+## Testing RedisAI 
 
 
 ```
 sh test_redisai.sh
 ```
 
+```
+sh test_redisai.sh 
 
++ redis-cli -x AI.MODELSET m TORCH GPU
++ redis-cli AI.TENSORSET a FLOAT 2 2 VALUES 2 3 2 3
+OK
++ redis-cli AI.TENSORSET b FLOAT 2 2 VALUES 2 3 2 3
+OK
+....
+....
+ajeetraina@ajeetraina-desktop:~/redisaiscript$ 
+
+```
 
 
