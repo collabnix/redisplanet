@@ -7,7 +7,7 @@
 
 ## Steps
 
-Clone the repository
+### Clone the repository
 
 ```
 git clone --recursive https://github.com/RedisAI/RedisAI
@@ -19,6 +19,9 @@ cd RedisAI
 
 Copy all these scripts under RedisAI directory and execute these scripts in this order:
 
+### Building RedisAI
+
+
 ```
 sh build_redisai.sh
 ```
@@ -28,6 +31,7 @@ sh build_redisai.sh
 It will take sometime based on your internet speed.
 
 
+### Running RedisAI with PyTorch
 
 ```
  sudo sh run_redisai_torch.sh 
