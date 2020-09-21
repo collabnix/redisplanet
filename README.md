@@ -12,6 +12,7 @@
   - [How to change Redis Port](https://github.com/collabnix/redis/tree/master/install/ubuntu/18.04#how-to-change-redis-server-port)<br>
 
 - Windows
+  - [Installing Redis on Windows 10 using WLS 2 Backend](https://gist.github.com/cromat/a065136db5bdc40f21dc139567ad0340)
 - MacOS
   - [Installing Redis Server on MacOS](https://github.com/collabnix/redisplanet/blob/master/mac/README.md)
   
