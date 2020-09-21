@@ -20,8 +20,8 @@ cd RedisAI
 Download all the below scripts and place it under RedisAI directory.
 
 - [install_redisai.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/install_rediai.sh)
-- [run_redisai_torch-sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/run_redisai_torch-sh)
-- [test_redisai-sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/test_redisai-sh)
+- [run_redisai_torch.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/run_redisai_torch-sh)
+- [test_redisai.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/test_redisai-sh)
 
 ### Building RedisAI
 
