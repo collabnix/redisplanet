@@ -45,9 +45,11 @@ A complete list of supported backends is in the release notes for each version.
 
 Backend libraries are dynamically loaded as needed, but can also be loaded during booting or at runtime. Refer to these pages for more information on loading backends:
 
-[AI.CONFIG command](https://oss.redislabs.com/redisai/commands/#aiconfig?_ga=2.121196299.224366325.1600062424-1938870273.1595669189)
+[AI.CONFIG command](https://oss.redislabs.com/redisai/commands/#aiconfig?_ga=2.121196299.224366325.1600062424-1938870273.1595669189)<br>
 [Backend configuration](https://oss.redislabs.com/redisai/configuration/#backend?_ga=2.121196299.224366325.1600062424-1938870273.1595669189)
 </details>
+
+
 
 
 ## Pre-requisite
