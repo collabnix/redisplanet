@@ -18,6 +18,9 @@ $ wget http://download.redis.io/releases/redis-6.0.8.tar.gz
 $ tar xzf redis-6.0.8.tar.gz
 $ cd redis-6.0.8
 $ make
+$ sudo cp src/redis-server /usr/local/bin/
+$ sudo cp src/redis-cli /usr/local/bin/
+
 ```
 
 
