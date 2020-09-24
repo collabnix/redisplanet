@@ -1,5 +1,63 @@
 # Installing RedisAI on Jetson Nano in Easy steps
 
+- RedisAI is a Redis module for executing Deep Learning/Machine Learning models and managing their data. 
+- Its purpose is being a “workhorse” for model serving, by providing out-of-the-box support for popular DL/ML frameworks and unparalleled performance. 
+- RedisAI both simplifies the deployment and serving of graphs by leveraging on Redis’ production-proven infrastructure, as well as maximizes computation throughput by adhering to the principle of data locality.
+
+This introduction is intended to present the core concepts it uses and the functionality it provides.
+
+n broad strokes, RedisAI looks like this:
+
++-----------------------------------------------------------------------------+
+| SERVER                                                                      |
+| +-------------------------------------------------------------------------+ |
+| | REDIS                              +----------+                         | |
+| | +----------+   +-----------------+ | Commands | +---------------------+ | |
+| | | KEYSPACE |   |  REDISAI          +----+-----+                       | | |
+| | |          |   |                        ^                             | | |
+| | +----------+   |  Data Structures       |             DL/ML Backends  | | |
+| | |          |   |  +--------+            |             +-------------+ | | |
+| | | mytensor +----->+ Tensor +<--+        |         +-->+ TensorFlow  | | | |
+| | |          |   |  +--------+   |        |         |   +-------------+ | | |
+| | +----------+   |               |        |         |                 | | | |
+| | |          |   |  +--------+   |        v         |   +-------------+ | | |
+| | | mymodel  +----->+ Model  +---+   +----+-----+   +-->+   PyTorch   | | | |
+| | |          |   |  +--------+   |   |          |   |   +-------------+ | | |
+| | +----------+   |               +-->+  Engine  +<--+                   | | |
+| | |          |   |  +--------+   |   |          |   |   +-------------+ | | |
+| | | myscript +----->+ Script +---+   +----+-----+   +-->+ ONNXRuntime | | | |
+| | |          |   |  +--------+   |        ^         |   +-------------+ | | |
+| | +----------+   |               |        |         |                   | | |
+| |              ^ |  +--------+   |        |         |   +-------------+ | | |
+| |              | |  +  DAG   +---+        |         +-->+     ...     | | | |
+| |              | |  +--------+            |             +-------------+ | | |
+| |              | +------------------------|-----------------------------+ | |
+| +--------------|--------------------------|-------------------------------+ |
+|                v                          v                                 |
+| +--------------+-----------------+   +------------------------------------+ |
+| | RAM                            |   | DEVICES                            | |
+| |                                |   | +-----+  +-----+  +-----+  +-----+ | |
+| | 00101010 00101010 00101010 ... |   | | CPU |  | GPU |  | TPU |  | ... | | |
+| |                                |   | +-----+  +-----+  +-----+  +-----+ | |
+| +--------------------------------+   +------------------------------------+ |
++-----------------------------------------------------------------------------+
+
+<details><summary>
+ ## How RedisAI works 
+ </summary>
+ 
+RedisAI bundles together best-of-breed technologies for delivering stable and performant computation graph serving. Every DL/ML framework ships with a runtime for executing the models developed with it, and the common practice for serving these is building a simple server around them.
+
+RedisAI aims to be that server, saving you from the need of installing the backend you’re using and developing a server for it. By itself that does not justify RedisAI’s existence so there’s more to it. Because RedisAI is implemented as a Redis module it automatically benefits from the server’s capabilities: be it Redis’ native data types, its robust eco-system of clients, high-availability, persistence, clustering, and Enterprise support.
+
+Because Redis is an in-memory data structure server RedisAI uses it for storing all of its data. The main data type supported by RedisAI is the Tensor that is the standard representation of data in the DL/ML domain. Because tensors are stored in the memory space of the Redis server, they are readily accessible to any of RedisAI’s backend libraries at minimal latency.
+
+The locality of data, which is tensor data in adjacency to DL/ML models backends, allows RedisAI to provide optimal performance when serving models. It also makes it a perfect choice for deploying DL/ML models in production and allowing them to be used by any application.
+
+Furthermore, RedisAI is also an optimal testbed for models as it allows the parallel execution of multiple computation graphs and, in future versions, assessing their respective performance in real-time.
+</details>
+
+
 ## Pre-requisite
 
 - Jetson Nano Board
@@ -127,4 +185,51 @@ ajeetraina@ajeetraina-desktop:~/redisaiscript$
 
 ```
 
+## Using RedisAI tensors 
+
+A tensor is an n-dimensional array and is the standard representation for data in DL/ML workloads. RedisAI adds to Redis a Tensor data structure that implements the tensor type. Like any datum in Redis, RedisAI’s Tensors are identified by key names.
+
+Creating new RedisAI tensors is done with the AI.TENSORSET command. For example, consider the tensor:
+
+tensorA
+
+We can create the RedisAI Tensor with the key name ‘tA’ with the following command:
+
+```
+AI.TENSORSET tA FLOAT 2 VALUES 2 3
+```
+
+Copy the command to your cli and hit the <ENTER> on your keyboard to execute it. It should look as follows:
+
+```
+$ redis-cli
+127.0.0.1:6379> AI.TENSORSET tA FLOAT 2 VALUES 2 3
+OK
+```
+
+The reply ‘OK’ means that the operation was successful. We’ve called the AI.TENSORSET command to set the key named ‘tA’ with the tensor’s data, but the name could have been any string value. The FLOAT argument specifies the type of values that the tensor stores, and in this case a single-precision floating-point. After the type argument comes the tensor’s shape as a list of its dimensions, or just a single dimension of 2.
+
+The VALUES argument tells RedisAI that the tensor’s data will be given as a sequence of numeric values and in this case the numbers 2 and 3. This is useful for development purposes and creating small tensors, however for practical purposes the AI.TENSORSET command also supports importing data in binary format.
+
+The Redis key ‘tA’ now stores a RedisAI Tensor. We can verify that using standard Redis commands such as EXISTS and TYPE:
+
+```
+127.0.0.1:6379> EXISTS tA
+(integer) 1
+127.0.0.1:6379> TYPE tA
+AI_TENSOR
+```
+
+Using AI.TENSORSET with the same key name, as long as it already stores a RedisAI Tensor, will overwrite the existing data with the new. To delete a RedisAI tensor, use the Redis DEL command.
+
+RedisAI Tensors are used as inputs and outputs in the execution of models and scripts. For reading the data from a RedisAI Tensor value there is the AI.TENSORGET command:
+
+```
+127.0.0.1:6379> AI.TENSORGET tA VALUES
+1) INT8
+2) 1) (integer) 2
+3) 1) (integer) 2
+    1) (integer) 3
+
+```
 
