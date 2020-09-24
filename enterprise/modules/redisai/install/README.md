@@ -96,15 +96,15 @@ cd RedisAI
 
 Download all the below scripts and place it under RedisAI directory.
 
-- [install_redisai.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/install_rediai.sh)
-- [run_redisai_torch.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/run_redisai_torch-sh)
-- [test_redisai.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/test_redisai-sh)
+- [install.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/install.sh)
+- [run.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/run.sh)
+- [test.sh](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/test.sh)
 
 ### Building RedisAI
 
 
 ```
-sh build_redisai.sh
+sh install.sh
 ```
 
 
@@ -121,7 +121,7 @@ Before you execute the below script, provide sufficient permission to redisai.so
 ```
 
 ```
- sudo sh run_redisai_torch.sh 
+ sudo sh run.sh 
 14438:C 20 Sep 2020 14:06:50.321 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 14438:C 20 Sep 2020 14:06:50.321 # Redis version=6.0.6, bits=64, commit=00000000, modified=0, pid=14438, just started
 14438:C 20 Sep 2020 14:06:50.321 # Configuration loaded
