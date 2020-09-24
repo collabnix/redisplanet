@@ -10,6 +10,7 @@ This introduction is intended to present the core concepts it uses and the funct
 <details><summary>
 How RedisAI works 
  </summary>
+ <br>
  
 RedisAI bundles together best-of-breed technologies for delivering stable and performant computation graph serving. Every DL/ML framework ships with a runtime for executing the models developed with it, and the common practice for serving these is building a simple server around them.
 
