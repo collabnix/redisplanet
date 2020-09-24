@@ -227,3 +227,6 @@ RedisAI Tensors are used as inputs and outputs in the execution of models and sc
 
 ```
 
+## Reference: 
+
+- https://oss.redislabs.com/redisai/
