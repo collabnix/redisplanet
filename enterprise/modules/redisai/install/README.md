@@ -3,13 +3,15 @@
 ## Pre-requisite
 
 - Jetson Nano Board
+- Power Adapter(5V 4A)
+- WiFi Module
 - Redis 6.x
 
 RedisAI require Redis 6.x. You might have to compile the newer version of Redis to get it up and running.
 
 ### Installing Redis 6.x
 
-Stop the running 
+
 
 Follow the below steps:
 
