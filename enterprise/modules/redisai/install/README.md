@@ -6,44 +6,9 @@
 
 This introduction is intended to present the core concepts it uses and the functionality it provides.
 
-n broad strokes, RedisAI looks like this:
-
-+-----------------------------------------------------------------------------+
-| SERVER                                                                      |
-| +-------------------------------------------------------------------------+ |
-| | REDIS                              +----------+                         | |
-| | +----------+   +-----------------+ | Commands | +---------------------+ | |
-| | | KEYSPACE |   |  REDISAI          +----+-----+                       | | |
-| | |          |   |                        ^                             | | |
-| | +----------+   |  Data Structures       |             DL/ML Backends  | | |
-| | |          |   |  +--------+            |             +-------------+ | | |
-| | | mytensor +----->+ Tensor +<--+        |         +-->+ TensorFlow  | | | |
-| | |          |   |  +--------+   |        |         |   +-------------+ | | |
-| | +----------+   |               |        |         |                 | | | |
-| | |          |   |  +--------+   |        v         |   +-------------+ | | |
-| | | mymodel  +----->+ Model  +---+   +----+-----+   +-->+   PyTorch   | | | |
-| | |          |   |  +--------+   |   |          |   |   +-------------+ | | |
-| | +----------+   |               +-->+  Engine  +<--+                   | | |
-| | |          |   |  +--------+   |   |          |   |   +-------------+ | | |
-| | | myscript +----->+ Script +---+   +----+-----+   +-->+ ONNXRuntime | | | |
-| | |          |   |  +--------+   |        ^         |   +-------------+ | | |
-| | +----------+   |               |        |         |                   | | |
-| |              ^ |  +--------+   |        |         |   +-------------+ | | |
-| |              | |  +  DAG   +---+        |         +-->+     ...     | | | |
-| |              | |  +--------+            |             +-------------+ | | |
-| |              | +------------------------|-----------------------------+ | |
-| +--------------|--------------------------|-------------------------------+ |
-|                v                          v                                 |
-| +--------------+-----------------+   +------------------------------------+ |
-| | RAM                            |   | DEVICES                            | |
-| |                                |   | +-----+  +-----+  +-----+  +-----+ | |
-| | 00101010 00101010 00101010 ... |   | | CPU |  | GPU |  | TPU |  | ... | | |
-| |                                |   | +-----+  +-----+  +-----+  +-----+ | |
-| +--------------------------------+   +------------------------------------+ |
-+-----------------------------------------------------------------------------+
 
 <details><summary>
- ## How RedisAI works 
+How RedisAI works 
  </summary>
  
 RedisAI bundles together best-of-breed technologies for delivering stable and performant computation graph serving. Every DL/ML framework ships with a runtime for executing the models developed with it, and the common practice for serving these is building a simple server around them.
