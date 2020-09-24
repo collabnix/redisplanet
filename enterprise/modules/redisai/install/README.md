@@ -22,7 +22,12 @@ $ sudo cp src/redis-server /usr/local/bin/
 $ sudo cp src/redis-cli /usr/local/bin/
 
 ```
+In case you are not able to stop Redis service, follow the below steps
 
+```
+redis-cli
+127.0.0.1> shutdown
+```
 
 
 ## Steps
@@ -56,6 +61,12 @@ It will take sometime based on your internet speed.
 
 
 ### Running RedisAI with PyTorch
+
+Before you execute the below script, provide sufficient permission to redisai.so
+
+```
+/RedisAI/install-cpu$ sudo chmod 755 redisai.so 
+```
 
 ```
  sudo sh run_redisai_torch.sh 
