@@ -3,6 +3,21 @@
 ## Pre-requisite
 
 - Jetson Nano Board
+- Redis 6.x
+
+RedisAI require Redis 6.x. You might have to compile the newer version of Redis to get it up and running.
+
+### Installing Redis 6.x
+
+Follow the below steps:
+
+```
+$ wget http://download.redis.io/releases/redis-6.0.8.tar.gz
+$ tar xzf redis-6.0.8.tar.gz
+$ cd redis-6.0.8
+$ make
+```
+
 
 
 ## Steps
