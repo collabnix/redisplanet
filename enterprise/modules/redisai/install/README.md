@@ -25,7 +25,8 @@ Furthermore, RedisAI is also an optimal testbed for models as it allows the para
 
 <details><summary>Data structures 
  </summary>
-RedisAI provides the following data structures:
+<br>
+ RedisAI provides the following data structures:
 
 - Tensor: Represents an n-dimensional array of values
 - Model: Represents a computation graph by one of the supported DL/ML framework backends
