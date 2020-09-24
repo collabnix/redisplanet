@@ -164,7 +164,7 @@ Before you execute the below script, provide sufficient permission to redisai.so
 
 
 ```
-sh test_redisai.sh 
+sh test.sh 
 
 + redis-cli -x AI.MODELSET m TORCH GPU
 + redis-cli AI.TENSORSET a FLOAT 2 2 VALUES 2 3 2 3
