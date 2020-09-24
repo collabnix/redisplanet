@@ -9,6 +9,8 @@ RedisAI require Redis 6.x. You might have to compile the newer version of Redis 
 
 ### Installing Redis 6.x
 
+Stop the running 
+
 Follow the below steps:
 
 ```
