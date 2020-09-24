@@ -23,6 +23,31 @@ The locality of data, which is tensor data in adjacency to DL/ML models backends
 Furthermore, RedisAI is also an optimal testbed for models as it allows the parallel execution of multiple computation graphs and, in future versions, assessing their respective performance in real-time.
 </details>
 
+<details><summary>Data structures 
+ </summary>
+RedisAI provides the following data structures:
+
+- Tensor: Represents an n-dimensional array of values
+- Model: Represents a computation graph by one of the supported DL/ML framework backends
+- Script: Represents a TorchScript program
+
+DL/ML backends 
+
+RedisAI supports DL/ML identifiers and their respective backend libraries, including:
+
+- TF: The TensorFlow backend
+- TFLITE: The TensorFlow Lite backend
+- TORCH: The PyTorch backend
+- ONNX: ONNXRuntime backend
+
+A complete list of supported backends is in the release notes for each version.
+
+Backend libraries are dynamically loaded as needed, but can also be loaded during booting or at runtime. Refer to these pages for more information on loading backends:
+
+[AI.CONFIG command](https://oss.redislabs.com/redisai/commands/#aiconfig?_ga=2.121196299.224366325.1600062424-1938870273.1595669189)
+[Backend configuration](https://oss.redislabs.com/redisai/configuration/#backend?_ga=2.121196299.224366325.1600062424-1938870273.1595669189)
+</details>
+
 
 ## Pre-requisite
 
