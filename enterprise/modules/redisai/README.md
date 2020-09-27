@@ -38,7 +38,7 @@ RedisAI both simplifies the deployment and serving of graphs by leveraging on Re
 - When you want to train your AI model somewhere in the Cloud. Once you want to do serving or the inferencing, Redis is the right database to do that
 
 
-
+# Blogs
 
 
 - [ Installing RedisAI on Jetson Nano](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisai/install/README.md)
