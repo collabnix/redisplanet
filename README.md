@@ -160,7 +160,12 @@ If you're looking out for fully managed cloud service, hosted or in your VPC, ch
 ### Caching:
 
  -  [Cache Your NodeJS application with Redis in 6 Minutes](https://itnext.io/learn-to-cache-your-nodejs-application-with-redis-in-6-minutes-745a574a9739)
- -  [AWS ElastiCache for Redis driven real-time retail dashboard](https://github.com/aws-samples/aws-elasticache-retail-dashboard)
+
+
+### Elasticache
+
+
+ - [AWS ElastiCache for Redis driven real-time retail dashboard](https://github.com/aws-samples/aws-elasticache-retail-dashboard)
 
 
 ### Redis Datasets
