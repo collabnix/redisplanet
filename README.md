@@ -31,6 +31,7 @@
   
 - Monitoring
   - [Visualize Redis Open Source using Rebrow](https://collabnix.com/visualize-redis-open-source-using-rebrow/)
+  - [Grafana Plugin: Redis](https://medium.com/@jyfchow/grafana-plugin-redis-20a18ad06923)
   
   
 ## Redis Configuration File
