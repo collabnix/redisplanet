@@ -121,6 +121,11 @@
 - [Lua Scripts](https://github.com/collabnix/redisplanet/blob/master/advancedapi/luascripts/README.md)
 - [Modules](https://github.com/collabnix/redisplanet/blob/master/advancedapi/modules/README.md)
 
+### API Rate Limiting
+
+- [API Rate Limiting with Node and Redis](https://codeburst.io/api-rate-limiting-with-node-and-redis-95354259c768)
+- [Building REST API backed by Redis](https://medium.com/swlh/building-rest-api-backed-by-redis-ae8ff4818460)
+
 ## Redis Enterprise Software
 
 ### Installation
