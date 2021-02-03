@@ -109,7 +109,9 @@
 - [STAT](https://github.com/collabnix/redisplanet/blob/master/advancedapi/README.md#continuous-stats-mode)
 - [MONITOR](https://github.com/collabnix/redisplanet/blob/master/advancedapi/README.md#monitor)
 
+### Redistreams
 
+- [Managing a Redis Stream](https://medium.com/@sydcanem/managing-a-redis-stream-b8c912e06fa9)
 
 ### Advanced API Implementation
 
@@ -150,7 +152,7 @@ If you're looking out for fully managed cloud service, hosted or in your VPC, ch
 
 
 
-## Redis Enterprise Modules
+## Modules
 
 - [RedisBloom]()
 - [RedisGraph](https://github.com/collabnix/redisplanet/blob/master/enterprise/modules/redisgraph/README.md)
