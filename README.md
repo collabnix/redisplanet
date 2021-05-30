@@ -2,56 +2,22 @@
 
 
 
-## Redis Open Source
+## Creating Redis database
 
-### Installation
-- Linux
-  - [Installing Redis Open Source on Ubuntu 18.04](https://github.com/collabnix/redis/blob/master/install/ubuntu/18.04/README.md)<br>
-  - [Starting Redis Server](https://github.com/collabnix/redis/tree/master/install/ubuntu/18.04#starting-redis-server)<br>
-  - [Shutting down Redis Server](https://github.com/collabnix/redis/tree/master/install/ubuntu/18.04#shutting-down-redis)<br>
-  - [How to change Redis Port](https://github.com/collabnix/redis/tree/master/install/ubuntu/18.04#how-to-change-redis-server-port)<br>
-
-- Windows
-  - [Installing Redis on Windows 10 using WLS 2 Backend](https://gist.github.com/cromat/a065136db5bdc40f21dc139567ad0340)
-- MacOS
-  - [Installing Redis Server on MacOS](https://github.com/collabnix/redisplanet/blob/master/mac/README.md)
-  
-- Docker
-  - [Redis on Docker Swarm](http://collabnix.com/getting-started-with-redis-inside-docker-container-in-2-minutes/)
-  - [Getting Started with Redis + Docker + Go](https://github.com/collabnix/redisplanet/blob/master/docker/Getting_Started_with_Docker-Redis-Go.md#getting-started-with-docker--redis--go)
-- Kubernetes
-   - Cloud
-     - GKE
-       -  [Setting up 3 Node Redis Cluster on GKE](https://github.com/collabnix/redis/blob/master/kubernetes/gke/README.md#setting-up-multi-node-redis-cluster-on-google-cloud-engine)<br>
-   - Minikube
-     - [How to run Redis Cluster on Kubernetes? ](https://github.com/collabnix/redisplanet/blob/master/kubernetes/redis-ruby-k8s/README.md#how-to-run-redis-cluster-on-kubernetes ) 
-
-- IoT
-  - [Redis running inside Docker Container on Jetson Nano](http://collabnix.com/running-redis-inside-docker-container-on-jetson-nano/)
-  - [How to Manage Real-Time IoT Sensor Data in Redis](https://redislabs.com/blog/how-to-manage-real-time-iot-sensor-data-in-redis/)
-  
-- Monitoring
-  - [Visualize Redis Open Source using Rebrow](https://collabnix.com/visualize-redis-open-source-using-rebrow/)
-  - [Grafana Plugin: Redis](https://medium.com/@jyfchow/grafana-plugin-redis-20a18ad06923)
-  
-  
-## Redis Configuration File
-
-- [Everything You Want to Know about Redis.conf](https://github.com/collabnix/redisplanet/blob/master/Redis-conf/README.md)
+- [Create database using Redis Enterprise Cloud](https://developer.redislabs.com/create/rediscloud)
+- [Create Redis database on Heroku](https://developer.redislabs.com/create/heroku)
+- [Create Redis database on Azure Cache](https://developer.redislabs.com/create/azure)
+- [Create Redis database using Google Cloud](https://developer.redislabs.com/create/gcp)
+- [Create Redis database on AWS](https://developer.redislabs.com/create/aws)
+- [Create Redis database on Docker](https://developer.redislabs.com/create/docker/)
+- [Create Redis database on Google Kubernetes Engine](https://developer.redislabs.com/create/kubernetes/)
+- [Create Redis database on Mac using Homebrew](https://developer.redislabs.com/create/homebrew/)
+- [Create Redis database on Microsoft Windows 10](https://developer.redislabs.com/create/windows)
+- [Create Redis database from Source](https://developer.redislabs.com/create/from-source/)
 
 
-## Features & FAQs
 
-- [Is Redis In-memory Database?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#what-do-you-mean-when-you-say-in-memory-database)
-- [Similarity between Redis Vs Memcached](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#similarity-between-memcached-vs-in-memory-database)
-- [Why Memcached & Redis so popular](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#why-are-memcached-and-redis-so-popular)
-- [When to use Memcached?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#when-to-use-memcached)
-- [What to use Redis?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#when-to-use-redis)
-- [Redis for data persistence](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-for-data-persistence)
-- [Redis for In-memory Data Replication](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-in-memory-data-replication)
-- [What is difference between Memcached Vs Redis Database?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-vs-memcached)
-- [Redis is a single-threaded. How can I acheive max throughput?](https://github.com/collabnix/redisplanet/blob/master/oss/feature/in-memory/README.md#redis-a-single-threaded)
-
+ 
 ### Redis Data Store | API
 
 - [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
