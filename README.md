@@ -15,11 +15,11 @@
 
 ## Local
 
-- [Create Redis database on Docker](https://developer.redislabs.com/create/docker/)
-- [Create Redis database on Google Kubernetes Engine](https://developer.redislabs.com/create/kubernetes/)
-- [Create Redis database on Mac using Homebrew](https://developer.redislabs.com/create/homebrew/)
-- [Create Redis database on Microsoft Windows 10](https://developer.redislabs.com/create/windows)
-- [Create Redis database from Source](https://developer.redislabs.com/create/from-source/)
+- [Docker](https://developer.redislabs.com/create/docker/)
+- [Google Kubernetes Engine](https://developer.redislabs.com/create/kubernetes/)
+- [Mac using Homebrew](https://developer.redislabs.com/create/homebrew/)
+- [Microsoft Windows 10](https://developer.redislabs.com/create/windows)
+- [Build from Source](https://developer.redislabs.com/create/from-source/)
 
 
 ## Developing with Redis Clients
