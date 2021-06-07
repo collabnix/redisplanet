@@ -171,6 +171,6 @@ Want to contribute? Click here and get your favorite tool added.
 - [How to cache REST API responses Using Redis & NodeJS](https://developer.redislabs.com/howtos/caching)
 - [How to build a Chat application using Redis](https://developer.redislabs.com/howtos/chatapp)
 - [Building an Analytics dashboard app using Redis](https://developer.redislabs.com/howtos/analytics)
-- [https://developer.redislabs.com/howtos/popupstore](https://developer.redislabs.com/howtos/popupstore)
+- [Building a Popup Store in Redis](https://developer.redislabs.com/howtos/popupstore)
 
  
