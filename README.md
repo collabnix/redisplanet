@@ -75,7 +75,7 @@ RedisPlanet is a curated list of popular Redis resources available over the inte
 
 - [Getting Started](https://developer.redislabs.com/howtos/redisai)
 
-### Redis Data Store | API
+### Redis Commands
 
 - [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
 - [Key & Value](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#key--value)
@@ -144,10 +144,6 @@ RedisPlanet is a curated list of popular Redis resources available over the inte
 - [Pub Sub](https://github.com/collabnix/redisplanet/blob/master/advancedapi/pubsub/README.md)
 - [Lua Scripts](https://github.com/collabnix/redisplanet/blob/master/advancedapi/luascripts/README.md)
 - [Modules](https://github.com/collabnix/redisplanet/blob/master/advancedapi/modules/README.md)
-
-
-
-
 
 
 ### Use cases
