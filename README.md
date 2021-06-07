@@ -1,6 +1,6 @@
 # Redisplanet - A Curated List of Redis Resources
 
-Redisplanet is a navigation site for [Redis Developer site](https://developer.redislabs.com). 
+Redisplanet is a curated list of popular Redis resources available over the internet. This repository is maintained by the Collabnix community. Feel free to contribute the links and resources for Redis.
 
 
 ## Creating Redis database
@@ -20,14 +20,18 @@ Redisplanet is a navigation site for [Redis Developer site](https://developer.re
 - [Mac using Homebrew](https://developer.redislabs.com/create/homebrew/)
 - [Microsoft Windows 10](https://developer.redislabs.com/create/windows)
 - [Build from Source](https://developer.redislabs.com/create/from-source/)
+- [RedisMod](https://developer.redislabs.com/explore/redismod)
 
 
 ## Developing with Redis Clients
 
 - [Java](https://developer.redislabs.com/develop/java/)
+  - [Java based application on Heroku using Redis](https://developer.redislabs.com/howtos/herokujava)
 - [Python](https://developer.redislabs.com/develop/python/)
+  - [Python based application on Heroku using Redis](https://developer.redislabs.com/howtos/herokupython)
 - [C](https://developer.redislabs.com/develop/C/)
 - [NodeJS](https://developer.redislabs.com/develop/nodejs/)
+  - [NodeJS based application on Heroku using Redis](https://developer.redislabs.com/howtos/herokunodejs)
 - [Ruby](https://developer.redislabs.com/develop/ruby/) 
 - [Php](https://developer.redislabs.com/develop/php/)
 
@@ -108,21 +112,51 @@ Redisplanet is a navigation site for [Redis Developer site](https://developer.re
 
 ### RediSearch
 
+- [Getting Started](https://developer.redislabs.com/howtos/redisearch)
+- [Movie Database](https://developer.redislabs.com/howtos/moviesdatabase/getting-started)
+
+
 ### RedisJSON
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisjson)
+- [How to build a Shopping cart app using NodeJS and RedisJSON](https://developer.redislabs.com/howtos/shoppingcart)
+- [HackerNews Clone using RedisJSON](https://developer.redislabs.com/howtos/hackernews)
+
+
+
+
+### RedisGears
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisgears)
+- [How to build a Fraud Detection System using RedisGears and RedisBloom](https://developer.redislabs.com/howtos/frauddetection)
+- [Building a Pipeline for Natural Language Processing using RedisGears](https://developer.redislabs.com/howtos/nlp)
 
 ### RedisGraph
 
+- [Getting Started](https://developer.redislabs.com/howtos/redisgraph)
+- [Building Movies database app using RedisGraph and NodeJS](https://developer.redislabs.com/howtos/redisgraphmovies)
+
 ### RedisBloom
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisbloom)
 
 ### RedisTimeSeries
 
+- [Getting Started](https://developer.redislabs.com/howtos/redistimeseries)
+
 ### RedisAI
 
-
-
-  
+- [Getting Started](https://developer.redislabs.com/howtos/redisai)
 
 
 
+### Use cases
+
+- [How to build a Real-Time Leaderboard app Using Redis](https://developer.redislabs.com/howtos/leaderboard)
+- [How to build a Rate Limiter using Redis](https://developer.redislabs.com/howtos/ratelimiting)
+- [How to cache REST API responses Using Redis & NodeJS](https://developer.redislabs.com/howtos/caching)
+- [How to build a Chat application using Redis](https://developer.redislabs.com/howtos/chatapp)
+- [Building an Analytics dashboard app using Redis](https://developer.redislabs.com/howtos/analytics)
+- [https://developer.redislabs.com/howtos/popupstore](https://developer.redislabs.com/howtos/popupstore)
 
  
