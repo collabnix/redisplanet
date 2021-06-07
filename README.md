@@ -75,6 +75,17 @@ RedisPlanet is a curated list of popular Redis resources available over the inte
 
 - [Getting Started](https://developer.redislabs.com/howtos/redisai)
 
+
+### RedisInsight - Redis GUI
+
+- [Getting Started](https://developer.redislabs.com/explore/redisinsight/getting-started)
+- [Visualize Redis database keys using RedisInsight Browser Tool](https://developer.redislabs.com/explore/redisinsight/browser)
+- [Debugging Redis using RedisInsight Slowlog Tool](https://developer.redislabs.com/explore/redisinsight/slowlog)
+- [Reduce Redis Memory usage using RedisInsight Memory Analyzer Tool](https://developer.redislabs.com/explore/redisinsight/memoryanalyzer)
+- [Manage Your Redis Cluster using RedisInsight Cluster Management Tool](https://developer.redislabs.com/explore/redisinsight/cluster)
+- [Using Redistreams](https://developer.redislabs.com/explore/redisinsight/streams)
+
+
 ### Redis Commands
 
 - [Concept](https://github.com/collabnix/redisplanet/blob/master/datastore/intro.md#data-store)
