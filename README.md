@@ -1,6 +1,6 @@
-# Redisplanet - A Curated List of Redis Resources
+# RedisPlanet - A Curated List of Redis Resources
 
-Redisplanet is a curated list of popular Redis resources available over the internet. This repository is maintained by the Collabnix community. Feel free to contribute the links and resources for Redis.
+RedisPlanet is a curated list of popular Redis resources available over the internet. This repository is maintained by the Collabnix community. Feel free to contribute the links and resources for Redis.
 
 
 ## Creating Redis database
