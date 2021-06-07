@@ -1,6 +1,9 @@
 # RedisPlanet - A Curated List of Redis Resources
 
-RedisPlanet is a curated list of popular Redis resources available over the internet. This repository is maintained by the Collabnix community. Feel free to contribute the links and resources for Redis.
+RedisPlanet is a curated list of popular Redis resources available over the internet. This repository is maintained by the Collabnix community. 
+
+Have Questions? Join us over [Slack](https://launchpass.com/collabnix) and get chance to be a part of 5300+ DevOps enthusiasts.
+Want to contribute? Click here and get your favorite tool added.
 
 
 ## Creating Redis database
