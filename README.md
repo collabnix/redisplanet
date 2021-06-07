@@ -83,8 +83,12 @@ RedisPlanet is a curated list of popular Redis resources available over the inte
 - [Debugging Redis using RedisInsight Slowlog Tool](https://developer.redislabs.com/explore/redisinsight/slowlog)
 - [Reduce Redis Memory usage using RedisInsight Memory Analyzer Tool](https://developer.redislabs.com/explore/redisinsight/memoryanalyzer)
 - [Manage Your Redis Cluster using RedisInsight Cluster Management Tool](https://developer.redislabs.com/explore/redisinsight/cluster)
-- [Using Redistreams](https://developer.redislabs.com/explore/redisinsight/streams)
-
+- [Using Redis Streams](https://developer.redislabs.com/explore/redisinsight/streams)
+- [Analyze Your Redis commands using RedisInsight Profiler tool](https://developer.redislabs.com/explore/redisinsight/profiler)
+- [Query, Visualize and Manipulate Graphs using RedisGraph Browser Tool](https://developer.redislabs.com/explore/redisinsight/redisgraph)
+- [Writing Your Serverless function using RedisGears Browser Tool](https://developer.redislabs.com/explore/redisinsight/redisgears)
+- [Managing time-series data using RedisTimeSeries Browser Tool](https://developer.redislabs.com/explore/redisinsight/redistimeseries)
+- [Unified Search and Analytics using RediSearch Browser Tool](https://developer.redislabs.com/explore/redisinsight/redisearch)
 
 ### Redis Commands
 
