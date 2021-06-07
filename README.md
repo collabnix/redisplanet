@@ -35,7 +35,7 @@ Redisplanet is a curated list of popular Redis resources available over the inte
 - [Ruby](https://developer.redislabs.com/develop/ruby/) 
 - [Php](https://developer.redislabs.com/develop/php/)
 
-## Modules
+## Extensibility via Redis Modules
 
 ### RediSearch
 
