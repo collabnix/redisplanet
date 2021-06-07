@@ -40,7 +40,7 @@ RedisPlanet is a curated list of popular Redis resources available over the inte
 ### RediSearch
 
 - [Getting Started](https://developer.redislabs.com/howtos/redisearch)
-- [Movie Database](https://developer.redislabs.com/howtos/moviesdatabase/getting-started)
+- [Building Movie Database app using RediSearch](https://developer.redislabs.com/howtos/moviesdatabase/getting-started)
 
 
 ### RedisJSON
