@@ -1,6 +1,6 @@
 # Redisplanet - A Curated List of Redis Resources
 
-
+Redisplanet is a navigation tool for [Redis Developer site](https://developer.redislabs.com). 
 
 
 ## Creating Redis database
