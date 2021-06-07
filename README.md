@@ -69,6 +69,7 @@ RedisPlanet is a curated list of popular Redis resources available over the inte
 ### RedisTimeSeries
 
 - [Getting Started](https://developer.redislabs.com/howtos/redistimeseries)
+- [How to Manage IoT Sensor data using RedisTimeSeries](https://redislabs.com/blog/how-to-manage-real-time-iot-sensor-data-in-redis/)
 
 ### RedisAI
 
