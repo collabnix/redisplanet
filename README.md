@@ -35,7 +35,44 @@ Redisplanet is a curated list of popular Redis resources available over the inte
 - [Ruby](https://developer.redislabs.com/develop/ruby/) 
 - [Php](https://developer.redislabs.com/develop/php/)
 
+## Modules
 
+### RediSearch
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisearch)
+- [Movie Database](https://developer.redislabs.com/howtos/moviesdatabase/getting-started)
+
+
+### RedisJSON
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisjson)
+- [How to build a Shopping cart app using NodeJS and RedisJSON](https://developer.redislabs.com/howtos/shoppingcart)
+- [HackerNews Clone using RedisJSON](https://developer.redislabs.com/howtos/hackernews)
+
+
+### RedisGears
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisgears)
+- [How to build a Fraud Detection System using RedisGears and RedisBloom](https://developer.redislabs.com/howtos/frauddetection)
+- [Building a Pipeline for Natural Language Processing using RedisGears](https://developer.redislabs.com/howtos/nlp)
+
+### RedisGraph
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisgraph)
+- [Building Movies database app using RedisGraph and NodeJS](https://developer.redislabs.com/howtos/redisgraphmovies)
+
+### RedisBloom
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisbloom)
+- [How to build a Fraud Detection System using RedisGears and RedisBloom](https://developer.redislabs.com/howtos/frauddetection)
+
+### RedisTimeSeries
+
+- [Getting Started](https://developer.redislabs.com/howtos/redistimeseries)
+
+### RedisAI
+
+- [Getting Started](https://developer.redislabs.com/howtos/redisai)
 
 ### Redis Data Store | API
 
@@ -108,45 +145,7 @@ Redisplanet is a curated list of popular Redis resources available over the inte
 - [Modules](https://github.com/collabnix/redisplanet/blob/master/advancedapi/modules/README.md)
 
 
-## Modules
 
-### RediSearch
-
-- [Getting Started](https://developer.redislabs.com/howtos/redisearch)
-- [Movie Database](https://developer.redislabs.com/howtos/moviesdatabase/getting-started)
-
-
-### RedisJSON
-
-- [Getting Started](https://developer.redislabs.com/howtos/redisjson)
-- [How to build a Shopping cart app using NodeJS and RedisJSON](https://developer.redislabs.com/howtos/shoppingcart)
-- [HackerNews Clone using RedisJSON](https://developer.redislabs.com/howtos/hackernews)
-
-
-
-
-### RedisGears
-
-- [Getting Started](https://developer.redislabs.com/howtos/redisgears)
-- [How to build a Fraud Detection System using RedisGears and RedisBloom](https://developer.redislabs.com/howtos/frauddetection)
-- [Building a Pipeline for Natural Language Processing using RedisGears](https://developer.redislabs.com/howtos/nlp)
-
-### RedisGraph
-
-- [Getting Started](https://developer.redislabs.com/howtos/redisgraph)
-- [Building Movies database app using RedisGraph and NodeJS](https://developer.redislabs.com/howtos/redisgraphmovies)
-
-### RedisBloom
-
-- [Getting Started](https://developer.redislabs.com/howtos/redisbloom)
-
-### RedisTimeSeries
-
-- [Getting Started](https://developer.redislabs.com/howtos/redistimeseries)
-
-### RedisAI
-
-- [Getting Started](https://developer.redislabs.com/howtos/redisai)
 
 
 
