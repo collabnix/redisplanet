@@ -1,3 +1,10 @@
+![stars](https://img.shields.io/github/stars/collabnix/redisplanet)
+![forks](https://img.shields.io/github/forks/collabnix/redisplanet)
+![Discord](https://img.shields.io/discord/1020180904129335379)
+![issues](https://img.shields.io/github/issues/collabnix/redisplanet)
+![Twitter](https://img.shields.io/twitter/follow/collabnix?style=social)
+
+
 # RedisPlanet - A Curated List of Redis Resources
 
 RedisPlanet is a curated list of popular Redis resources available over the internet. This repository is maintained by the Collabnix community. 
